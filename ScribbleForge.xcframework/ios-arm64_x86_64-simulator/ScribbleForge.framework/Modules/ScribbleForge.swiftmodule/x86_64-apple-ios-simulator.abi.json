@@ -3294,6 +3294,54 @@
         "children": [
           {
             "kind": "Var",
+            "name": "userManager",
+            "printedName": "userManager",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UserManager",
+                "printedName": "ScribbleForge.UserManager",
+                "usr": "s:13ScribbleForge11UserManagerC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ScribbleForge4RoomC11userManagerAA04UserE0Cvp",
+            "mangledName": "$s13ScribbleForge4RoomC11userManagerAA04UserE0Cvp",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserManager",
+                    "printedName": "ScribbleForge.UserManager",
+                    "usr": "s:13ScribbleForge11UserManagerC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ScribbleForge4RoomC11userManagerAA04UserE0Cvg",
+                "mangledName": "$s13ScribbleForge4RoomC11userManagerAA04UserE0Cvg",
+                "moduleName": "ScribbleForge",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "applicationExtraOptionHandler",
             "printedName": "applicationExtraOptionHandler",
             "children": [
@@ -3566,8 +3614,8 @@
           },
           {
             "kind": "Function",
-            "name": "version",
-            "printedName": "version()",
+            "name": "sdkVersion",
+            "printedName": "sdkVersion()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3577,8 +3625,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13ScribbleForge4RoomC7versionSSyFZ",
-            "mangledName": "$s13ScribbleForge4RoomC7versionSSyFZ",
+            "usr": "s:13ScribbleForge4RoomC10sdkVersionSSyFZ",
+            "mangledName": "$s13ScribbleForge4RoomC10sdkVersionSSyFZ",
             "moduleName": "ScribbleForge",
             "static": true,
             "declAttributes": [
@@ -4647,6 +4695,140 @@
         "kind": "TypeDecl",
         "name": "RoomUser",
         "printedName": "RoomUser",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ScribbleForge8RoomUserV2idSSvp",
+            "mangledName": "$s13ScribbleForge8RoomUserV2idSSvp",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ScribbleForge8RoomUserV2idSSvg",
+                "mangledName": "$s13ScribbleForge8RoomUserV2idSSvg",
+                "moduleName": "ScribbleForge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nickName",
+            "printedName": "nickName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ScribbleForge8RoomUserV8nickNameSSvp",
+            "mangledName": "$s13ScribbleForge8RoomUserV8nickNameSSvp",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ScribbleForge8RoomUserV8nickNameSSvg",
+                "mangledName": "$s13ScribbleForge8RoomUserV8nickNameSSvg",
+                "moduleName": "ScribbleForge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "online",
+            "printedName": "online",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ScribbleForge8RoomUserV6onlineSbvp",
+            "mangledName": "$s13ScribbleForge8RoomUserV6onlineSbvp",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ScribbleForge8RoomUserV6onlineSbvg",
+                "mangledName": "$s13ScribbleForge8RoomUserV6onlineSbvg",
+                "moduleName": "ScribbleForge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
         "declKind": "Struct",
         "usr": "s:13ScribbleForge8RoomUserV",
         "mangledName": "$s13ScribbleForge8RoomUserV",
@@ -4659,6 +4841,74 @@
         "kind": "TypeDecl",
         "name": "UserManager",
         "printedName": "UserManager",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "idList",
+            "printedName": "idList()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge11UserManagerC6idListSaySSGyF",
+            "mangledName": "$s13ScribbleForge11UserManagerC6idListSaySSGyF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getUser",
+            "printedName": "getUser(userId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ScribbleForge.RoomUser?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RoomUser",
+                    "printedName": "ScribbleForge.RoomUser",
+                    "usr": "s:13ScribbleForge8RoomUserV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge11UserManagerC03getC06userIdAA04RoomC0VSgSS_tF",
+            "mangledName": "$s13ScribbleForge11UserManagerC03getC06userIdAA04RoomC0VSgSS_tF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
         "declKind": "Class",
         "usr": "s:13ScribbleForge11UserManagerC",
         "mangledName": "$s13ScribbleForge11UserManagerC",
@@ -5134,7 +5384,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(appId:userId:userManager:doc:option:extraOptions:)",
+            "printedName": "init(appId:userId:userManager:doc:option:extraOptions:launchFinishHandler:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5211,11 +5461,36 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13ScribbleForge10WhiteboardC5appId04userE00F7Manager3doc6option12extraOptionsACSS_SSAA04UserG0CAA4YDocCSDySSypGANSgtcfc",
-            "mangledName": "$s13ScribbleForge10WhiteboardC5appId04userE00F7Manager3doc6option12extraOptionsACSS_SSAA04UserG0CAA4YDocCSDySSypGANSgtcfc",
+            "usr": "s:13ScribbleForge10WhiteboardC5appId04userE00F7Manager3doc6option12extraOptions19launchFinishHandlerACSS_SSAA04UserG0CAA4YDocCSDySSypGAOSgyycSgtcfc",
+            "mangledName": "$s13ScribbleForge10WhiteboardC5appId04userE00F7Manager3doc6option12extraOptions19launchFinishHandlerACSS_SSAA04UserG0CAA4YDocCSDySSypGAOSgyycSgtcfc",
             "moduleName": "ScribbleForge",
             "declAttributes": [
               "Required",
@@ -6092,6 +6367,120 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "setElementAttribute",
+            "printedName": "setElementAttribute(layerId:elementId:attributeKey:value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ElementAttributesKey",
+                "printedName": "ScribbleForge.ElementAttributesKey",
+                "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge10WhiteboardC19setElementAttribute7layerId07elementH012attributeKey5valueySS_SSAA0e10AttributesK0OyptF",
+            "mangledName": "$s13ScribbleForge10WhiteboardC19setElementAttribute7layerId07elementH012attributeKey5valueySS_SSAA0e10AttributesK0OyptF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getElementAttribute",
+            "printedName": "getElementAttribute(sceneId:elementId:attributeKey:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ElementAttributesKey",
+                "printedName": "ScribbleForge.ElementAttributesKey",
+                "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Any?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Any?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge10WhiteboardC19getElementAttribute7sceneId07elementH012attributeKey17completionHandlerySS_SSAA0e10AttributesK0OyypSgcSgtF",
+            "mangledName": "$s13ScribbleForge10WhiteboardC19getElementAttribute7sceneId07elementH012attributeKey17completionHandlerySS_SSAA0e10AttributesK0OyypSgcSgtF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -6116,6 +6505,45 @@
               "Override"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "whiteboardError",
+            "printedName": "whiteboardError(_:errorCode:errorMessage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Whiteboard",
+                "printedName": "ScribbleForge.Whiteboard",
+                "usr": "c:@M@ScribbleForge@objc(cs)Whiteboard"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge10WhiteboardC15whiteboardError_9errorCode0F7MessageyAC_SiSStF",
+            "mangledName": "$s13ScribbleForge10WhiteboardC15whiteboardError_9errorCode0F7MessageyAC_SiSStF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -6416,9 +6844,660 @@
         "printedName": "WhiteboardInializeOption",
         "children": [
           {
+            "kind": "TypeDecl",
+            "name": "DefaultToolInfo",
+            "printedName": "DefaultToolInfo",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(tool:fontSize:fontFamily:strokeColor:fillColor:strokeWidth:dashArray:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultToolInfo",
+                    "printedName": "ScribbleForge.WhiteboardInializeOption.DefaultToolInfo",
+                    "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ScribbleForge.WhiteboardToolType?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WhiteboardToolType",
+                        "printedName": "ScribbleForge.WhiteboardToolType",
+                        "usr": "s:13ScribbleForge18WhiteboardToolTypeO"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Float?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Float?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.Float]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.Float]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Float",
+                            "printedName": "Swift.Float",
+                            "usr": "s:Sf"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV4tool8fontSize0J6Family11strokeColor04fillN00M5Width9dashArrayAeA0cG4TypeOSg_SfSgSSSgA2qPSaySfGSgtcfc",
+                "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV4tool8fontSize0J6Family11strokeColor04fillN00M5Width9dashArrayAeA0cG4TypeOSg_SfSgSSSgA2qPSaySfGSgtcfc",
+                "moduleName": "ScribbleForge",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "tool",
+                "printedName": "tool",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ScribbleForge.WhiteboardToolType?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WhiteboardToolType",
+                        "printedName": "ScribbleForge.WhiteboardToolType",
+                        "usr": "s:13ScribbleForge18WhiteboardToolTypeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV4toolAA0cG4TypeOSgvp",
+                "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV4toolAA0cG4TypeOSgvp",
+                "moduleName": "ScribbleForge",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "ScribbleForge.WhiteboardToolType?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "WhiteboardToolType",
+                            "printedName": "ScribbleForge.WhiteboardToolType",
+                            "usr": "s:13ScribbleForge18WhiteboardToolTypeO"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV4toolAA0cG4TypeOSgvg",
+                    "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV4toolAA0cG4TypeOSgvg",
+                    "moduleName": "ScribbleForge",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "fontSize",
+                "printedName": "fontSize",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Float?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV8fontSizeSfSgvp",
+                "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV8fontSizeSfSgvp",
+                "moduleName": "ScribbleForge",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Float?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Float",
+                            "printedName": "Swift.Float",
+                            "usr": "s:Sf"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV8fontSizeSfSgvg",
+                    "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV8fontSizeSfSgvg",
+                    "moduleName": "ScribbleForge",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "fontFamily",
+                "printedName": "fontFamily",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV10fontFamilySSSgvp",
+                "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV10fontFamilySSSgvp",
+                "moduleName": "ScribbleForge",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV10fontFamilySSSgvg",
+                    "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV10fontFamilySSSgvg",
+                    "moduleName": "ScribbleForge",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "strokeColor",
+                "printedName": "strokeColor",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV11strokeColorSSSgvp",
+                "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV11strokeColorSSSgvp",
+                "moduleName": "ScribbleForge",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV11strokeColorSSSgvg",
+                    "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV11strokeColorSSSgvg",
+                    "moduleName": "ScribbleForge",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "fillColor",
+                "printedName": "fillColor",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV9fillColorSSSgvp",
+                "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV9fillColorSSSgvp",
+                "moduleName": "ScribbleForge",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV9fillColorSSSgvg",
+                    "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV9fillColorSSSgvg",
+                    "moduleName": "ScribbleForge",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "strokeWidth",
+                "printedName": "strokeWidth",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Float?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV11strokeWidthSfSgvp",
+                "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV11strokeWidthSfSgvp",
+                "moduleName": "ScribbleForge",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Float?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Float",
+                            "printedName": "Swift.Float",
+                            "usr": "s:Sf"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV11strokeWidthSfSgvg",
+                    "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV11strokeWidthSfSgvg",
+                    "moduleName": "ScribbleForge",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "dashArray",
+                "printedName": "dashArray",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.Float]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.Float]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Float",
+                            "printedName": "Swift.Float",
+                            "usr": "s:Sf"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV9dashArraySaySfGSgvp",
+                "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV9dashArraySaySfGSgvp",
+                "moduleName": "ScribbleForge",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.Float]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[Swift.Float]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Float",
+                                "printedName": "Swift.Float",
+                                "usr": "s:Sf"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV9dashArraySaySfGSgvg",
+                    "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV9dashArraySaySfGSgvg",
+                    "moduleName": "ScribbleForge",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultToolInfo",
+                    "printedName": "ScribbleForge.WhiteboardInializeOption.DefaultToolInfo",
+                    "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "ScribbleForge",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "encode",
+                "printedName": "encode(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Encoder",
+                    "printedName": "any Swift.Encoder",
+                    "usr": "s:s7EncoderP"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV6encode2toys7Encoder_p_tKF",
+                "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV6encode2toys7Encoder_p_tKF",
+                "moduleName": "ScribbleForge",
+                "implicit": true,
+                "throwing": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV",
+            "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(width:height:)",
+            "printedName": "init(width:height:defaultToolInfo:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6437,11 +7516,26 @@
                 "name": "Int",
                 "printedName": "Swift.Int",
                 "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ScribbleForge.WhiteboardInializeOption.DefaultToolInfo?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultToolInfo",
+                    "printedName": "ScribbleForge.WhiteboardInializeOption.DefaultToolInfo",
+                    "usr": "s:13ScribbleForge24WhiteboardInializeOptionV15DefaultToolInfoV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13ScribbleForge24WhiteboardInializeOptionV5width6heightACSi_Sitcfc",
-            "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV5width6heightACSi_Sitcfc",
+            "usr": "s:13ScribbleForge24WhiteboardInializeOptionV5width6height15defaultToolInfoACSi_SiAC07DefaultiJ0VSgtcfc",
+            "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV5width6height15defaultToolInfoACSi_SiAC07DefaultiJ0VSgtcfc",
             "moduleName": "ScribbleForge",
             "declAttributes": [
               "AccessControl"
@@ -6705,6 +7799,45 @@
             "declKind": "Func",
             "usr": "s:13ScribbleForge18WhiteboardDelegateP30whiteboardPagePermissionUpdate_6userId10permissionyAA0C0C_SSAA0cG0VtF",
             "mangledName": "$s13ScribbleForge18WhiteboardDelegateP30whiteboardPagePermissionUpdate_6userId10permissionyAA0C0C_SSAA0cG0VtF",
+            "moduleName": "ScribbleForge",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScribbleForge.WhiteboardDelegate>",
+            "sugared_genericSig": "<Self where Self : ScribbleForge.WhiteboardDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "whiteboardError",
+            "printedName": "whiteboardError(_:errorCode:errorMessage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Whiteboard",
+                "printedName": "ScribbleForge.Whiteboard",
+                "usr": "c:@M@ScribbleForge@objc(cs)Whiteboard"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge18WhiteboardDelegateP15whiteboardError_9errorCode0G7MessageyAA0C0C_SiSStF",
+            "mangledName": "$s13ScribbleForge18WhiteboardDelegateP15whiteboardError_9errorCode0G7MessageyAA0C0C_SiSStF",
             "moduleName": "ScribbleForge",
             "genericSig": "<τ_0_0 where τ_0_0 : ScribbleForge.WhiteboardDelegate>",
             "sugared_genericSig": "<Self where Self : ScribbleForge.WhiteboardDelegate>",
@@ -7367,9 +8500,864 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "ElementAttributesKey",
+        "printedName": "ElementAttributesKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "strokeColor",
+            "printedName": "strokeColor",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScribbleForge.ElementAttributesKey.Type) -> ScribbleForge.ElementAttributesKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ElementAttributesKey",
+                    "printedName": "ScribbleForge.ElementAttributesKey",
+                    "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScribbleForge.ElementAttributesKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ElementAttributesKey",
+                        "printedName": "ScribbleForge.ElementAttributesKey",
+                        "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13ScribbleForge20ElementAttributesKeyO11strokeColoryA2CmF",
+            "mangledName": "$s13ScribbleForge20ElementAttributesKeyO11strokeColoryA2CmF",
+            "moduleName": "ScribbleForge"
+          },
+          {
+            "kind": "Var",
+            "name": "fillColor",
+            "printedName": "fillColor",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScribbleForge.ElementAttributesKey.Type) -> ScribbleForge.ElementAttributesKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ElementAttributesKey",
+                    "printedName": "ScribbleForge.ElementAttributesKey",
+                    "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScribbleForge.ElementAttributesKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ElementAttributesKey",
+                        "printedName": "ScribbleForge.ElementAttributesKey",
+                        "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13ScribbleForge20ElementAttributesKeyO9fillColoryA2CmF",
+            "mangledName": "$s13ScribbleForge20ElementAttributesKeyO9fillColoryA2CmF",
+            "moduleName": "ScribbleForge"
+          },
+          {
+            "kind": "Var",
+            "name": "strokeWidth",
+            "printedName": "strokeWidth",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScribbleForge.ElementAttributesKey.Type) -> ScribbleForge.ElementAttributesKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ElementAttributesKey",
+                    "printedName": "ScribbleForge.ElementAttributesKey",
+                    "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScribbleForge.ElementAttributesKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ElementAttributesKey",
+                        "printedName": "ScribbleForge.ElementAttributesKey",
+                        "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13ScribbleForge20ElementAttributesKeyO11strokeWidthyA2CmF",
+            "mangledName": "$s13ScribbleForge20ElementAttributesKeyO11strokeWidthyA2CmF",
+            "moduleName": "ScribbleForge"
+          },
+          {
+            "kind": "Var",
+            "name": "fontSize",
+            "printedName": "fontSize",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScribbleForge.ElementAttributesKey.Type) -> ScribbleForge.ElementAttributesKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ElementAttributesKey",
+                    "printedName": "ScribbleForge.ElementAttributesKey",
+                    "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScribbleForge.ElementAttributesKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ElementAttributesKey",
+                        "printedName": "ScribbleForge.ElementAttributesKey",
+                        "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13ScribbleForge20ElementAttributesKeyO8fontSizeyA2CmF",
+            "mangledName": "$s13ScribbleForge20ElementAttributesKeyO8fontSizeyA2CmF",
+            "moduleName": "ScribbleForge"
+          },
+          {
+            "kind": "Var",
+            "name": "dashArray",
+            "printedName": "dashArray",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScribbleForge.ElementAttributesKey.Type) -> ScribbleForge.ElementAttributesKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ElementAttributesKey",
+                    "printedName": "ScribbleForge.ElementAttributesKey",
+                    "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScribbleForge.ElementAttributesKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ElementAttributesKey",
+                        "printedName": "ScribbleForge.ElementAttributesKey",
+                        "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13ScribbleForge20ElementAttributesKeyO9dashArrayyA2CmF",
+            "mangledName": "$s13ScribbleForge20ElementAttributesKeyO9dashArrayyA2CmF",
+            "moduleName": "ScribbleForge"
+          },
+          {
+            "kind": "Var",
+            "name": "headArrow",
+            "printedName": "headArrow",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScribbleForge.ElementAttributesKey.Type) -> ScribbleForge.ElementAttributesKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ElementAttributesKey",
+                    "printedName": "ScribbleForge.ElementAttributesKey",
+                    "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScribbleForge.ElementAttributesKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ElementAttributesKey",
+                        "printedName": "ScribbleForge.ElementAttributesKey",
+                        "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13ScribbleForge20ElementAttributesKeyO9headArrowyA2CmF",
+            "mangledName": "$s13ScribbleForge20ElementAttributesKeyO9headArrowyA2CmF",
+            "moduleName": "ScribbleForge"
+          },
+          {
+            "kind": "Var",
+            "name": "tailArrow",
+            "printedName": "tailArrow",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScribbleForge.ElementAttributesKey.Type) -> ScribbleForge.ElementAttributesKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ElementAttributesKey",
+                    "printedName": "ScribbleForge.ElementAttributesKey",
+                    "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScribbleForge.ElementAttributesKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ElementAttributesKey",
+                        "printedName": "ScribbleForge.ElementAttributesKey",
+                        "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13ScribbleForge20ElementAttributesKeyO9tailArrowyA2CmF",
+            "mangledName": "$s13ScribbleForge20ElementAttributesKeyO9tailArrowyA2CmF",
+            "moduleName": "ScribbleForge"
+          },
+          {
+            "kind": "Var",
+            "name": "fontFamily",
+            "printedName": "fontFamily",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScribbleForge.ElementAttributesKey.Type) -> ScribbleForge.ElementAttributesKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ElementAttributesKey",
+                    "printedName": "ScribbleForge.ElementAttributesKey",
+                    "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScribbleForge.ElementAttributesKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ElementAttributesKey",
+                        "printedName": "ScribbleForge.ElementAttributesKey",
+                        "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13ScribbleForge20ElementAttributesKeyO10fontFamilyyA2CmF",
+            "mangledName": "$s13ScribbleForge20ElementAttributesKeyO10fontFamilyyA2CmF",
+            "moduleName": "ScribbleForge"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ScribbleForge.ElementAttributesKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ElementAttributesKey",
+                    "printedName": "ScribbleForge.ElementAttributesKey",
+                    "usr": "s:13ScribbleForge20ElementAttributesKeyO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13ScribbleForge20ElementAttributesKeyO8rawValueACSgSS_tcfc",
+            "mangledName": "$s13ScribbleForge20ElementAttributesKeyO8rawValueACSgSS_tcfc",
+            "moduleName": "ScribbleForge",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ScribbleForge20ElementAttributesKeyO8rawValueSSvp",
+            "mangledName": "$s13ScribbleForge20ElementAttributesKeyO8rawValueSSvp",
+            "moduleName": "ScribbleForge",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ScribbleForge20ElementAttributesKeyO8rawValueSSvg",
+                "mangledName": "$s13ScribbleForge20ElementAttributesKeyO8rawValueSSvg",
+                "moduleName": "ScribbleForge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13ScribbleForge20ElementAttributesKeyO",
+        "mangledName": "$s13ScribbleForge20ElementAttributesKeyO",
+        "moduleName": "ScribbleForge",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "WhiteboardToolInfo",
         "printedName": "WhiteboardToolInfo",
         "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(tool:fontSize:fontFamily:strokeColor:fillColor:strokeWidth:dashArray:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WhiteboardToolInfo",
+                "printedName": "ScribbleForge.WhiteboardToolInfo",
+                "usr": "s:13ScribbleForge18WhiteboardToolInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WhiteboardToolType",
+                "printedName": "ScribbleForge.WhiteboardToolType",
+                "usr": "s:13ScribbleForge18WhiteboardToolTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Float]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13ScribbleForge18WhiteboardToolInfoV4tool8fontSize0G6Family11strokeColor04fillK00J5Width9dashArrayAcA0cD4TypeO_SfS3SSgSfSaySfGtcfc",
+            "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV4tool8fontSize0G6Family11strokeColor04fillK00J5Width9dashArrayAcA0cD4TypeO_SfS3SSgSfSaySfGtcfc",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "tool",
+            "printedName": "tool",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WhiteboardToolType",
+                "printedName": "ScribbleForge.WhiteboardToolType",
+                "usr": "s:13ScribbleForge18WhiteboardToolTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ScribbleForge18WhiteboardToolInfoV4toolAA0cD4TypeOvp",
+            "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV4toolAA0cD4TypeOvp",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WhiteboardToolType",
+                    "printedName": "ScribbleForge.WhiteboardToolType",
+                    "usr": "s:13ScribbleForge18WhiteboardToolTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ScribbleForge18WhiteboardToolInfoV4toolAA0cD4TypeOvg",
+                "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV4toolAA0cD4TypeOvg",
+                "moduleName": "ScribbleForge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fontSize",
+            "printedName": "fontSize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ScribbleForge18WhiteboardToolInfoV8fontSizeSfvp",
+            "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV8fontSizeSfvp",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ScribbleForge18WhiteboardToolInfoV8fontSizeSfvg",
+                "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV8fontSizeSfvg",
+                "moduleName": "ScribbleForge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fontFamily",
+            "printedName": "fontFamily",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ScribbleForge18WhiteboardToolInfoV10fontFamilySSvp",
+            "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV10fontFamilySSvp",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ScribbleForge18WhiteboardToolInfoV10fontFamilySSvg",
+                "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV10fontFamilySSvg",
+                "moduleName": "ScribbleForge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "strokeColor",
+            "printedName": "strokeColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ScribbleForge18WhiteboardToolInfoV11strokeColorSSvp",
+            "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV11strokeColorSSvp",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ScribbleForge18WhiteboardToolInfoV11strokeColorSSvg",
+                "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV11strokeColorSSvg",
+                "moduleName": "ScribbleForge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fillColor",
+            "printedName": "fillColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ScribbleForge18WhiteboardToolInfoV9fillColorSSSgvp",
+            "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV9fillColorSSSgvp",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ScribbleForge18WhiteboardToolInfoV9fillColorSSSgvg",
+                "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV9fillColorSSSgvg",
+                "moduleName": "ScribbleForge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "strokeWidth",
+            "printedName": "strokeWidth",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ScribbleForge18WhiteboardToolInfoV11strokeWidthSfvp",
+            "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV11strokeWidthSfvp",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ScribbleForge18WhiteboardToolInfoV11strokeWidthSfvg",
+                "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV11strokeWidthSfvg",
+                "moduleName": "ScribbleForge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "dashArray",
+            "printedName": "dashArray",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Float]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ScribbleForge18WhiteboardToolInfoV9dashArraySaySfGvp",
+            "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV9dashArraySaySfGvp",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Float]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ScribbleForge18WhiteboardToolInfoV9dashArraySaySfGvg",
+                "mangledName": "$s13ScribbleForge18WhiteboardToolInfoV9dashArraySaySfGvg",
+                "moduleName": "ScribbleForge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
           {
             "kind": "Constructor",
             "name": "init",
@@ -7559,21 +9547,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[Swift.String]",
+                "printedName": "[ScribbleForge.ElementAttributesKey]",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "ElementAttributesKey",
+                    "printedName": "ScribbleForge.ElementAttributesKey",
+                    "usr": "s:13ScribbleForge20ElementAttributesKeyO"
                   }
                 ],
                 "usr": "s:Sa"
               }
             ],
             "declKind": "Var",
-            "usr": "s:13ScribbleForge20WhiteboardSelectInfoV10attributesSaySSGvp",
-            "mangledName": "$s13ScribbleForge20WhiteboardSelectInfoV10attributesSaySSGvp",
+            "usr": "s:13ScribbleForge20WhiteboardSelectInfoV10attributesSayAA20ElementAttributesKeyOGvp",
+            "mangledName": "$s13ScribbleForge20WhiteboardSelectInfoV10attributesSayAA20ElementAttributesKeyOGvp",
             "moduleName": "ScribbleForge",
             "declAttributes": [
               "HasStorage",
@@ -7590,21 +9578,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Array",
-                    "printedName": "[Swift.String]",
+                    "printedName": "[ScribbleForge.ElementAttributesKey]",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
+                        "name": "ElementAttributesKey",
+                        "printedName": "ScribbleForge.ElementAttributesKey",
+                        "usr": "s:13ScribbleForge20ElementAttributesKeyO"
                       }
                     ],
                     "usr": "s:Sa"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13ScribbleForge20WhiteboardSelectInfoV10attributesSaySSGvg",
-                "mangledName": "$s13ScribbleForge20WhiteboardSelectInfoV10attributesSaySSGvg",
+                "usr": "s:13ScribbleForge20WhiteboardSelectInfoV10attributesSayAA20ElementAttributesKeyOGvg",
+                "mangledName": "$s13ScribbleForge20WhiteboardSelectInfoV10attributesSayAA20ElementAttributesKeyOGvg",
                 "moduleName": "ScribbleForge",
                 "implicit": true,
                 "accessorKind": "get"
@@ -8082,6 +10070,43 @@
             "moduleName": "ScribbleForge"
           },
           {
+            "kind": "Var",
+            "name": "arrow",
+            "printedName": "arrow",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScribbleForge.WhiteboardToolType.Type) -> ScribbleForge.WhiteboardToolType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WhiteboardToolType",
+                    "printedName": "ScribbleForge.WhiteboardToolType",
+                    "usr": "s:13ScribbleForge18WhiteboardToolTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScribbleForge.WhiteboardToolType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WhiteboardToolType",
+                        "printedName": "ScribbleForge.WhiteboardToolType",
+                        "usr": "s:13ScribbleForge18WhiteboardToolTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13ScribbleForge18WhiteboardToolTypeO5arrowyA2CmF",
+            "mangledName": "$s13ScribbleForge18WhiteboardToolTypeO5arrowyA2CmF",
+            "moduleName": "ScribbleForge"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -8292,6 +10317,13 @@
             "printedName": "Decodable",
             "usr": "s:Se",
             "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
           }
         ]
       },
@@ -13946,6 +15978,150 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "UIColor",
+        "printedName": "UIColor",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(hex:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:So7UIColorC13ScribbleForgeE3hexABSS_tcfc",
+            "mangledName": "$sSo7UIColorC13ScribbleForgeE3hexABSS_tcfc",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "toHexString",
+            "printedName": "toHexString()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So7UIColorC13ScribbleForgeE11toHexStringSSyF",
+            "mangledName": "$sSo7UIColorC13ScribbleForgeE11toHexStringSSyF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIColor",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIColor",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByColorLiteral",
+            "printedName": "_ExpressibleByColorLiteral",
+            "usr": "s:s26_ExpressibleByColorLiteralP",
+            "mangledName": "$ss26_ExpressibleByColorLiteralP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "Date",
         "printedName": "Date",
         "children": [
@@ -14550,34 +16726,34 @@
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Rtm2.1\/AgoraRtm+NetworkProvider.swift",
       "kind": "StringLiteral",
       "offset": 12808,
-      "length": 20,
-      "value": "\"http:\/\/47.96.23.97\""
+      "length": 41,
+      "value": "\"https:\/\/forge-persistence.netless.group\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Rtm2.1\/AgoraRtm+NetworkProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 13166,
+      "offset": 13187,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Rtm2.1\/AgoraRtm+NetworkProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 13217,
+      "offset": 13238,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Rtm2.1\/AgoraRtm+NetworkProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 13275,
+      "offset": 13296,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Rtm2.1\/AgoraRtm+NetworkProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 13328,
+      "offset": 13349,
       "length": 4,
       "value": "true"
     },
@@ -14731,21 +16907,21 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Network\/ChunkedNetworkAdaptor.swift",
       "kind": "Array",
-      "offset": 357,
+      "offset": 467,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Network\/ChunkedNetworkAdaptor.swift",
       "kind": "Array",
-      "offset": 410,
+      "offset": 520,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Network\/ChunkedNetworkAdaptor.swift",
       "kind": "FloatLiteral",
-      "offset": 483,
+      "offset": 593,
       "length": 5,
       "value": "0.016"
     },
@@ -15340,14 +17516,14 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/Logger.swift",
       "kind": "BooleanLiteral",
-      "offset": 1766,
+      "offset": 1780,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 1827,
+      "offset": 1841,
       "length": 42,
       "value": "\"$DHH:mm:ss.SSS$d,$C$L$c,$F:$l,$N,$M $X\n\""
     },
@@ -15367,8 +17543,22 @@
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/History\/Recorder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 312,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/History\/Recorder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 349,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/History\/Recorder.swift",
       "kind": "IntegerLiteral",
-      "offset": 4228,
+      "offset": 4415,
       "length": 1,
       "value": "0"
     },
@@ -15382,28 +17572,28 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/RemoteLogger.swift",
       "kind": "Array",
-      "offset": 518,
+      "offset": 527,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/RemoteLogger.swift",
       "kind": "BooleanLiteral",
-      "offset": 541,
+      "offset": 550,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/RemoteLogger.swift",
       "kind": "Array",
-      "offset": 581,
+      "offset": 597,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/RemoteLogger.swift",
       "kind": "StringLiteral",
-      "offset": 628,
+      "offset": 652,
       "length": 38,
       "value": "\"com.remote-log-upload.scribble-forge\""
     },
@@ -15431,56 +17621,56 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 728,
+      "offset": 735,
       "length": 21,
       "value": "\"scribble-forge.data\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 774,
+      "offset": 781,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 1170,
+      "offset": 1177,
       "length": 6,
       "value": "\"diff\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 1214,
+      "offset": 1221,
       "length": 10,
       "value": "\"conflict\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "FloatLiteral",
-      "offset": 1705,
+      "offset": 2668,
       "length": 5,
       "value": "0.016"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "IntegerLiteral",
-      "offset": 1752,
+      "offset": 2715,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 1795,
+      "offset": 2758,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 1848,
+      "offset": 2811,
       "length": 4,
       "value": "true"
     },
@@ -15634,28 +17824,28 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/UserManager.swift",
       "kind": "StringLiteral",
-      "offset": 312,
+      "offset": 333,
       "length": 13,
       "value": "\"@room\/users\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/UserManager.swift",
       "kind": "StringLiteral",
-      "offset": 354,
+      "offset": 375,
       "length": 8,
       "value": "\"userId\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/UserManager.swift",
       "kind": "StringLiteral",
-      "offset": 393,
+      "offset": 414,
       "length": 10,
       "value": "\"nickName\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/UserManager.swift",
       "kind": "StringLiteral",
-      "offset": 432,
+      "offset": 453,
       "length": 8,
       "value": "\"online\""
     },
@@ -15788,7 +17978,7 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Apps\/Whiteboard\/WhiteboardRoomCallbacks.swift",
       "kind": "StringLiteral",
-      "offset": 1766,
+      "offset": 2472,
       "length": 23,
       "value": "\"ScribbleForge.WhiteboardRoomCallbacks\""
     },

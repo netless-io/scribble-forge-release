@@ -188,13 +188,10 @@
       },
       {
         "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
+        "name": "RxSwift",
+        "printedName": "RxSwift",
         "declKind": "Import",
-        "moduleName": "ScribbleForge",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "ScribbleForge"
       },
       {
         "kind": "Import",
@@ -3275,8 +3272,8 @@
       },
       {
         "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
+        "name": "RxSwift",
+        "printedName": "RxSwift",
         "declKind": "Import",
         "moduleName": "ScribbleForge"
       },
@@ -4130,6 +4127,28 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReactiveCompatible",
+            "printedName": "ReactiveCompatible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReactiveBase",
+                "printedName": "ReactiveBase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSObject",
+                    "printedName": "ObjectiveC.NSObject",
+                    "usr": "c:objc(cs)NSObject"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxSwift18ReactiveCompatibleP",
+            "mangledName": "$s7RxSwift18ReactiveCompatibleP"
           }
         ]
       },
@@ -4667,15 +4686,15 @@
       },
       {
         "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "ScribbleForge"
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "RxSwift",
+        "printedName": "RxSwift",
         "declKind": "Import",
         "moduleName": "ScribbleForge"
       },
@@ -4935,8 +4954,8 @@
       },
       {
         "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
+        "name": "RxSwift",
+        "printedName": "RxSwift",
         "declKind": "Import",
         "moduleName": "ScribbleForge"
       },
@@ -6818,6 +6837,28 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReactiveCompatible",
+            "printedName": "ReactiveCompatible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReactiveBase",
+                "printedName": "ReactiveBase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSObject",
+                    "printedName": "ObjectiveC.NSObject",
+                    "usr": "c:objc(cs)NSObject"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxSwift18ReactiveCompatibleP",
+            "mangledName": "$s7RxSwift18ReactiveCompatibleP"
           },
           {
             "kind": "Conformance",
@@ -15969,6 +16010,28 @@
           },
           {
             "kind": "Conformance",
+            "name": "ReactiveCompatible",
+            "printedName": "ReactiveCompatible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReactiveBase",
+                "printedName": "ReactiveBase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSObject",
+                    "printedName": "ObjectiveC.NSObject",
+                    "usr": "c:objc(cs)NSObject"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxSwift18ReactiveCompatibleP",
+            "mangledName": "$s7RxSwift18ReactiveCompatibleP"
+          },
+          {
+            "kind": "Conformance",
             "name": "NetworkProvider",
             "printedName": "NetworkProvider",
             "usr": "s:13ScribbleForge15NetworkProviderP",
@@ -16110,6 +16173,28 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReactiveCompatible",
+            "printedName": "ReactiveCompatible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReactiveBase",
+                "printedName": "ReactiveBase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSObject",
+                    "printedName": "ObjectiveC.NSObject",
+                    "usr": "c:objc(cs)NSObject"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxSwift18ReactiveCompatibleP",
+            "mangledName": "$s7RxSwift18ReactiveCompatibleP"
           },
           {
             "kind": "Conformance",
@@ -16498,6 +16583,28 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReactiveCompatible",
+            "printedName": "ReactiveCompatible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReactiveBase",
+                "printedName": "ReactiveBase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSObject",
+                    "printedName": "ObjectiveC.NSObject",
+                    "usr": "c:objc(cs)NSObject"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxSwift18ReactiveCompatibleP",
+            "mangledName": "$s7RxSwift18ReactiveCompatibleP"
           }
         ]
       }
@@ -16760,14 +16867,14 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/ApplicationManager.swift",
       "kind": "Dictionary",
-      "offset": 1210,
+      "offset": 1079,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/ApplicationManager.swift",
       "kind": "Dictionary",
-      "offset": 1280,
+      "offset": 1149,
       "length": 3,
       "value": "[]"
     },
@@ -17558,7 +17665,7 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/History\/Recorder.swift",
       "kind": "IntegerLiteral",
-      "offset": 4415,
+      "offset": 4552,
       "length": 1,
       "value": "0"
     },
@@ -17635,42 +17742,42 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 1177,
+      "offset": 1163,
       "length": 6,
       "value": "\"diff\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 1221,
+      "offset": 1207,
       "length": 10,
       "value": "\"conflict\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "FloatLiteral",
-      "offset": 2668,
+      "offset": 2654,
       "length": 5,
       "value": "0.016"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "IntegerLiteral",
-      "offset": 2715,
+      "offset": 2701,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 2758,
+      "offset": 2744,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 2811,
+      "offset": 2797,
       "length": 4,
       "value": "true"
     },

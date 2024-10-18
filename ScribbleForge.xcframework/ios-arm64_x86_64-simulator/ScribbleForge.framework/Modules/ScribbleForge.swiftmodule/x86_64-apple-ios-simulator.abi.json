@@ -3635,7 +3635,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(roomId:userId:nickName:snapshotFetcher:uploaderExecutor:remoteLogger:networkProvider:mergeThrottleTime:mergeBufferCount:allowConsoleLog:allowConsoleVerboseLog:)",
+            "printedName": "init(roomId:userId:nickName:snapshotFetcher:uploaderExecutor:remoteLogger:networkProvider:mergeThrottleTime:mergeBufferCount:logDirPath:allowConsoleLog:allowConsoleVerboseLog:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3709,6 +3709,21 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
@@ -3723,8 +3738,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13ScribbleForge4RoomC6roomId04userE08nickName15snapshotFetcher16uploaderExecutor12remoteLogger15networkProvider17mergeThrottleTime0Q11BufferCount15allowConsoleLog0vw7VerboseX0ACSS_S2SAA08SnapshotJ0_pAA08UploaderL0_pAA15BaseDestinationCSgAA07NetworkP0_pSdSiS2btcfc",
-            "mangledName": "$s13ScribbleForge4RoomC6roomId04userE08nickName15snapshotFetcher16uploaderExecutor12remoteLogger15networkProvider17mergeThrottleTime0Q11BufferCount15allowConsoleLog0vw7VerboseX0ACSS_S2SAA08SnapshotJ0_pAA08UploaderL0_pAA15BaseDestinationCSgAA07NetworkP0_pSdSiS2btcfc",
+            "usr": "s:13ScribbleForge4RoomC6roomId04userE08nickName15snapshotFetcher16uploaderExecutor12remoteLogger15networkProvider17mergeThrottleTime0Q11BufferCount10logDirPath15allowConsoleLog0yZ10VerboseLogACSS_S2SAA08SnapshotJ0_pAA08UploaderL0_pAA15BaseDestinationCSgAA07NetworkP0_pSdSiSSSgS2btcfc",
+            "mangledName": "$s13ScribbleForge4RoomC6roomId04userE08nickName15snapshotFetcher16uploaderExecutor12remoteLogger15networkProvider17mergeThrottleTime0Q11BufferCount10logDirPath15allowConsoleLog0yZ10VerboseLogACSS_S2SAA08SnapshotJ0_pAA08UploaderL0_pAA15BaseDestinationCSgAA07NetworkP0_pSdSiSSSgS2btcfc",
             "moduleName": "ScribbleForge",
             "declAttributes": [
               "AccessControl",
@@ -3936,7 +3951,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(roomId:userId:nickName:token:agoraRtmKit:allowRemoteLog:allowConsoleLog:allowConsoleVerboseLog:useSnapshotFetch:)",
+            "printedName": "init(roomId:userId:nickName:token:agoraRtmKit:logDirPath:allowRemoteLog:allowConsoleLog:allowConsoleVerboseLog:useSnapshotFetch:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3976,6 +3991,21 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
@@ -4004,8 +4034,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13ScribbleForge4RoomC6roomId04userE08nickName5token11agoraRtmKit14allowRemoteLog0m7ConsoleO00mp7VerboseO016useSnapshotFetchACSS_S3SSo05Agorak6ClientL0CS4btcfc",
-            "mangledName": "$s13ScribbleForge4RoomC6roomId04userE08nickName5token11agoraRtmKit14allowRemoteLog0m7ConsoleO00mp7VerboseO016useSnapshotFetchACSS_S3SSo05Agorak6ClientL0CS4btcfc",
+            "usr": "s:13ScribbleForge4RoomC6roomId04userE08nickName5token11agoraRtmKit10logDirPath14allowRemoteLog0p7ConsoleR00ps7VerboseR016useSnapshotFetchACSS_S3SSo05Agorak6ClientL0CSSSgS4btcfc",
+            "mangledName": "$s13ScribbleForge4RoomC6roomId04userE08nickName5token11agoraRtmKit10logDirPath14allowRemoteLog0p7ConsoleR00ps7VerboseR016useSnapshotFetchACSS_S3SSo05Agorak6ClientL0CSSSgS4btcfc",
             "moduleName": "ScribbleForge",
             "declAttributes": [
               "Convenience",
@@ -6527,6 +6557,72 @@
           },
           {
             "kind": "Function",
+            "name": "whiteboardUndoStackLengthUpdate",
+            "printedName": "whiteboardUndoStackLengthUpdate(_:undoStackLength:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Whiteboard",
+                "printedName": "ScribbleForge.Whiteboard",
+                "usr": "c:@M@ScribbleForge@objc(cs)Whiteboard"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge10WhiteboardC31whiteboardUndoStackLengthUpdate_04undofG0yAC_SitF",
+            "mangledName": "$s13ScribbleForge10WhiteboardC31whiteboardUndoStackLengthUpdate_04undofG0yAC_SitF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "whiteboardRedoStackLengthUpdate",
+            "printedName": "whiteboardRedoStackLengthUpdate(_:redoStackLength:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Whiteboard",
+                "printedName": "ScribbleForge.Whiteboard",
+                "usr": "c:@M@ScribbleForge@objc(cs)Whiteboard"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge10WhiteboardC31whiteboardRedoStackLengthUpdate_04redofG0yAC_SitF",
+            "mangledName": "$s13ScribbleForge10WhiteboardC31whiteboardRedoStackLengthUpdate_04redofG0yAC_SitF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "whiteboardError",
             "printedName": "whiteboardError(_:errorCode:errorMessage:)",
             "children": [
@@ -7801,6 +7897,72 @@
             "declKind": "Func",
             "usr": "s:13ScribbleForge18WhiteboardDelegateP24whiteboardPageInfoUpdate_06activeF5Index9pageCountyAA0C0C_S2itF",
             "mangledName": "$s13ScribbleForge18WhiteboardDelegateP24whiteboardPageInfoUpdate_06activeF5Index9pageCountyAA0C0C_S2itF",
+            "moduleName": "ScribbleForge",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScribbleForge.WhiteboardDelegate>",
+            "sugared_genericSig": "<Self where Self : ScribbleForge.WhiteboardDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "whiteboardUndoStackLengthUpdate",
+            "printedName": "whiteboardUndoStackLengthUpdate(_:undoStackLength:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Whiteboard",
+                "printedName": "ScribbleForge.Whiteboard",
+                "usr": "c:@M@ScribbleForge@objc(cs)Whiteboard"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge18WhiteboardDelegateP31whiteboardUndoStackLengthUpdate_04undogH0yAA0C0C_SitF",
+            "mangledName": "$s13ScribbleForge18WhiteboardDelegateP31whiteboardUndoStackLengthUpdate_04undogH0yAA0C0C_SitF",
+            "moduleName": "ScribbleForge",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScribbleForge.WhiteboardDelegate>",
+            "sugared_genericSig": "<Self where Self : ScribbleForge.WhiteboardDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "whiteboardRedoStackLengthUpdate",
+            "printedName": "whiteboardRedoStackLengthUpdate(_:redoStackLength:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Whiteboard",
+                "printedName": "ScribbleForge.Whiteboard",
+                "usr": "c:@M@ScribbleForge@objc(cs)Whiteboard"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge18WhiteboardDelegateP31whiteboardRedoStackLengthUpdate_04redogH0yAA0C0C_SitF",
+            "mangledName": "$s13ScribbleForge18WhiteboardDelegateP31whiteboardRedoStackLengthUpdate_04redogH0yAA0C0C_SitF",
             "moduleName": "ScribbleForge",
             "genericSig": "<τ_0_0 where τ_0_0 : ScribbleForge.WhiteboardDelegate>",
             "sugared_genericSig": "<Self where Self : ScribbleForge.WhiteboardDelegate>",
@@ -16839,28 +17001,28 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Rtm2.1\/AgoraRtm+NetworkProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 13187,
+      "offset": 13235,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Rtm2.1\/AgoraRtm+NetworkProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 13238,
+      "offset": 13286,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Rtm2.1\/AgoraRtm+NetworkProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 13296,
+      "offset": 13344,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Rtm2.1\/AgoraRtm+NetworkProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 13349,
+      "offset": 13397,
       "length": 4,
       "value": "true"
     },
@@ -17602,37 +17764,16 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/Logger.swift",
       "kind": "BooleanLiteral",
-      "offset": 481,
+      "offset": 637,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 1157,
+      "offset": 1405,
       "length": 33,
       "value": "\"$DHH:mm:ss.SSS$d $C$L$c - $M $X\""
-    },
-    {
-      "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 1416,
-      "length": 43,
-      "value": "\"Date,Level,Function,FILE,MODULE,Message\n\""
-    },
-    {
-      "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/Logger.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1780,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 1841,
-      "length": 42,
-      "value": "\"$DHH:mm:ss.SSS$d,$C$L$c,$F:$l,$N,$M $X\n\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/History\/Recorder.swift",
@@ -17770,14 +17911,14 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 2744,
+      "offset": 2787,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 2797,
+      "offset": 2840,
       "length": 4,
       "value": "true"
     },

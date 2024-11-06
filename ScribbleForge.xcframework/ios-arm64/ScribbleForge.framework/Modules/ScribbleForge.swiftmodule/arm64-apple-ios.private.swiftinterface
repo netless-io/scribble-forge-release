@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
 // swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ScribbleForge
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AgoraRtmKit
 import Combine
 import Dispatch
@@ -130,6 +131,8 @@ extension ScribbleForge.NetworkProvider {
 }
 @objc public class Room : ObjectiveC.NSObject {
   final public let userManager: ScribbleForge.UserManager
+  final public let roomId: Swift.String
+  final public let userId: Swift.String
   public var applicationExtraOptionHandler: ((any ScribbleForge.Application.Type, Swift.String) -> [Swift.String : Any]?)? {
     get
     set
@@ -196,6 +199,7 @@ public enum ViewMode {
   }
   public func terminal()
   public func clean()
+  public func setFreeModeUserPageIndex(index: Swift.Int, userId: Swift.String)
   public func setFreeModeUserPage(id: Swift.String, userId: Swift.String)
   public func setViewMode(_ viewMode: ScribbleForge.ViewMode, forUserId userId: Swift.String? = nil)
   public func getViewMode(_ userId: Swift.String? = nil, completionHandler: @escaping ((ScribbleForge.ViewMode) -> Swift.Void))
@@ -332,7 +336,7 @@ public enum WhiteboardToolType : Swift.String, Swift.CaseIterable, Swift.Codable
   public init?(rawValue: Swift.String)
   public typealias AllCases = [ScribbleForge.WhiteboardToolType]
   public typealias RawValue = Swift.String
-  public static var allCases: [ScribbleForge.WhiteboardToolType] {
+  nonisolated public static var allCases: [ScribbleForge.WhiteboardToolType] {
     get
   }
   public var rawValue: Swift.String {

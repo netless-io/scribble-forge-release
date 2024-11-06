@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ScribbleForge'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.license          = { :type => 'MIT', :text => 'Copyright netless 2024' }
   s.summary          = 'Interacetive whiteboard SDK.'
   s.description      = 'Next generation Interacetive whiteboard SDK.'

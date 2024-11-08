@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'AgoraRtm2.2.x' do |s|
-    s.source_files = 'ScribbleForge/Classes/Rtm2.1/**/*'
     s.dependency 'AgoraRtm', '~> 2.2.2'
     s.dependency 'ScribbleForge/Basic'
     s.ios.deployment_target = '11.0'

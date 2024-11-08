@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ScribbleForge'
-  s.version          = '0.1.9'
+  s.version          = '0.1.10'
   s.license          = { :type => 'MIT', :text => 'Copyright netless 2024' }
   s.summary          = 'Interacetive whiteboard SDK.'
   s.description      = 'Next generation Interacetive whiteboard SDK.'
@@ -18,6 +18,12 @@ Pod::Spec.new do |s|
 
   s.subspec 'AgoraRtm2.1.x' do |s|
     s.dependency 'AgoraRtm_iOS', '~> 2.1.12'
+    s.dependency 'ScribbleForge/Basic'
+  end
+
+  s.subspec 'AgoraRtm2.2.x' do |s|
+    s.source_files = 'ScribbleForge/Classes/Rtm2.1/**/*'
+    s.dependency 'AgoraRtm', '~> 2.2.2'
     s.dependency 'ScribbleForge/Basic'
   end
  

@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ScribbleForge
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ScribbleForge
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AgoraRtmKit
 import Combine
 import Dispatch
@@ -30,8 +31,16 @@ extension AgoraRtmKit.AgoraRtmClientKit : ScribbleForge.NetworkProvider {
   public func addUserLeaveListener(_ listener: @escaping ((Swift.String) -> Swift.Void))
   public func getUsersSnapshot(_ completionHandler: @escaping ((Swift.Result<[Swift.String], any Swift.Error>) -> Swift.Void))
 }
+public enum Region : Swift.Equatable {
+  case cn_hz
+  case custom(endPoint: Swift.String)
+  public var endPoint: Swift.String {
+    get
+  }
+  public static func == (a: ScribbleForge.Region, b: ScribbleForge.Region) -> Swift.Bool
+}
 extension ScribbleForge.Room {
-  convenience public init(roomId: Swift.String, userId: Swift.String, nickName: Swift.String, token: Swift.String, agoraRtmKit: AgoraRtmKit.AgoraRtmClientKit, logDirPath: Swift.String? = nil, allowRemoteLog: Swift.Bool = true, allowConsoleLog: Swift.Bool = true, allowConsoleVerboseLog: Swift.Bool = false, useSnapshotFetch: Swift.Bool = true)
+  convenience public init(roomId: Swift.String, userId: Swift.String, nickName: Swift.String, token: Swift.String, agoraRtmKit: AgoraRtmKit.AgoraRtmClientKit, region: ScribbleForge.Region, logDirPath: Swift.String? = nil, allowRemoteLog: Swift.Bool = true, allowConsoleLog: Swift.Bool = true, allowConsoleVerboseLog: Swift.Bool = false, useSnapshotFetch: Swift.Bool = true)
 }
 public protocol Application {
   static var typeIdentifier: Swift.String { get }
@@ -332,10 +341,11 @@ public enum WhiteboardToolType : Swift.String, Swift.CaseIterable, Swift.Codable
   case eraser
   case laser
   case arrow
+  case grab
   public init?(rawValue: Swift.String)
   public typealias AllCases = [ScribbleForge.WhiteboardToolType]
   public typealias RawValue = Swift.String
-  public static var allCases: [ScribbleForge.WhiteboardToolType] {
+  nonisolated public static var allCases: [ScribbleForge.WhiteboardToolType] {
     get
   }
   public var rawValue: Swift.String {

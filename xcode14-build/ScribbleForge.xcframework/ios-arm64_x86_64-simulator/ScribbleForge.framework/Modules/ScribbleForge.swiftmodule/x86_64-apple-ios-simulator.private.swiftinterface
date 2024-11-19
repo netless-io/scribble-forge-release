@@ -1,0 +1,563 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ScribbleForge
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AgoraRtmKit
+import Combine
+import Dispatch
+import Foundation
+import JavaScriptCore
+import NTLBridge
+import RxSwift
+@_exported import ScribbleForge
+import Swift
+import WebKit
+import _Concurrency
+import _StringProcessing
+extension AgoraRtmKit.AgoraRtmClientKit : ScribbleForge.NetworkProvider {
+  public func manualTriggerNetworkIsConnectedForSomeSpecialProduct()
+  public func unsubscribe(channelId: Swift.String)
+  public func networkProviderClose()
+  public func networkProviderInitialize(completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func removeMessageListener(channelId: Swift.String)
+  public func publish(channelId: Swift.String, data: Foundation.Data, messageType: Swift.String, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func publish(channelId: Swift.String, message: Swift.String, messageType: Swift.String, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func subscribe(mainPresence: Swift.Bool, channelId: Swift.String, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func addNetworkStatusListener(_ listener: @escaping ((ScribbleForge.NetworkConnectionState, [Swift.String : Any]) -> Swift.Void))
+  public func addMessageListener(channelId: Swift.String, _ listener: @escaping ((ScribbleForge.NetworkMessage) -> Swift.Void))
+  public func removeNetworkStatusListeners()
+  public func addUserJoinListener(_ listener: @escaping ((Swift.String) -> Swift.Void))
+  public func addUserLeaveListener(_ listener: @escaping ((Swift.String) -> Swift.Void))
+  public func getUsersSnapshot(_ completionHandler: @escaping ((Swift.Result<[Swift.String], Swift.Error>) -> Swift.Void))
+}
+public enum Region : Swift.Equatable {
+  case cn_hz
+  case custom(endPoint: Swift.String)
+  public var endPoint: Swift.String {
+    get
+  }
+  public static func == (a: ScribbleForge.Region, b: ScribbleForge.Region) -> Swift.Bool
+}
+extension ScribbleForge.Room {
+  convenience public init(roomId: Swift.String, userId: Swift.String, nickName: Swift.String, token: Swift.String, agoraRtmKit: AgoraRtmKit.AgoraRtmClientKit, region: ScribbleForge.Region, logDirPath: Swift.String? = nil, allowRemoteLog: Swift.Bool = true, allowConsoleLog: Swift.Bool = true, allowConsoleVerboseLog: Swift.Bool = false, useSnapshotFetch: Swift.Bool = true)
+}
+public protocol Application {
+  static var typeIdentifier: Swift.String { get }
+  var appId: Swift.String { get }
+  var applicationView: UIKit.UIView? { get }
+}
+public class BaseDestination : Swift.Hashable, Swift.Equatable {
+  public struct LevelString {
+    public var verbose: Swift.String
+    public var debug: Swift.String
+    public var info: Swift.String
+    public var warning: Swift.String
+    public var error: Swift.String
+  }
+  public struct LevelColor {
+    public var verbose: Swift.String
+    public var debug: Swift.String
+    public var info: Swift.String
+    public var warning: Swift.String
+    public var error: Swift.String
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  open var defaultHashValue: Swift.Int {
+    get
+  }
+  public init()
+  public func execute(synchronously: Swift.Bool, block: @escaping () -> Swift.Void)
+  public func executeSynchronously<T>(block: @escaping () throws -> T) rethrows -> T
+  @objc deinit
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public func == (lhs: ScribbleForge.BaseDestination, rhs: ScribbleForge.BaseDestination) -> Swift.Bool
+extension UIKit.UIColor {
+  convenience public init(hex: Swift.String)
+  public func toHexString() -> Swift.String
+}
+@_hasMissingDesignatedInitializers public class IndexedNavigation {
+  public func pageCount(completionHandler: @escaping ((Swift.Int) -> Swift.Void))
+  public func currentPageIndex(completionHandler: @escaping ((Swift.Int) -> Swift.Void))
+  public func pushPage(goto: Swift.Bool = true)
+  public func insertPage(after: Swift.Int)
+  public func prevPage()
+  public func nextPage()
+  public func removePage(index: Swift.Int? = nil)
+  public func gotoPage(index: Swift.Int)
+  @objc deinit
+}
+public protocol JSConvertible {
+  init(jsValue: JavaScriptCore.JSValue)
+}
+public struct JSUInt8ArrayNativeData : ScribbleForge.JSConvertible {
+  public init(jsValue: JavaScriptCore.JSValue)
+}
+public struct JSString : ScribbleForge.JSConvertible {
+  public init(jsValue: JavaScriptCore.JSValue)
+}
+public enum NetworkConnectionState {
+  case connecting
+  case connected
+  case reconnecting
+  case disconnected
+  case failed
+  public static func == (a: ScribbleForge.NetworkConnectionState, b: ScribbleForge.NetworkConnectionState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct NetworkMessage {
+  public let data: Foundation.Data?
+  public let publisher: Swift.String
+  public let customType: Swift.String?
+  public let message: Swift.String?
+  public init(publisher: Swift.String, customType: Swift.String?, data: Foundation.Data?, message: Swift.String?)
+}
+public protocol NetworkProvider {
+  func unsubscribe(channelId: Swift.String)
+  func subscribe(mainPresence: Swift.Bool, channelId: Swift.String, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func publish(channelId: Swift.String, message: Swift.String, messageType: Swift.String, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func publish(channelId: Swift.String, data: Foundation.Data, messageType: Swift.String, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func addMessageListener(channelId: Swift.String, _ listener: @escaping ((ScribbleForge.NetworkMessage) -> Swift.Void))
+  func removeMessageListener(channelId: Swift.String)
+  func addNetworkStatusListener(_ listener: @escaping ((ScribbleForge.NetworkConnectionState, [Swift.String : Any]) -> Swift.Void))
+  func removeNetworkStatusListeners()
+  func addUserJoinListener(_ listener: @escaping ((Swift.String) -> Swift.Void))
+  func addUserLeaveListener(_ listener: @escaping ((Swift.String) -> Swift.Void))
+  func getUsersSnapshot(_ completionHandler: @escaping ((Swift.Result<[Swift.String], Swift.Error>) -> Swift.Void))
+  func networkProviderInitialize(completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func networkProviderClose()
+  func manualTriggerNetworkIsConnectedForSomeSpecialProduct()
+}
+extension ScribbleForge.NetworkProvider {
+  public func networkProviderInitialize(completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+}
+@objc public class Room : ObjectiveC.NSObject {
+  final public let userManager: ScribbleForge.UserManager
+  final public let roomId: Swift.String
+  final public let userId: Swift.String
+  public var applicationExtraOptionHandler: ((ScribbleForge.Application.Type, Swift.String) -> [Swift.String : Any]?)? {
+    get
+    set
+  }
+  public static func sdkVersion() -> Swift.String
+  public init(roomId: Swift.String, userId: Swift.String, nickName: Swift.String, snapshotFetcher: ScribbleForge.SnapshotFetcher, uploaderExecutor: ScribbleForge.UploaderExecutor, remoteLogger: ScribbleForge.BaseDestination?, networkProvider: ScribbleForge.NetworkProvider, mergeThrottleTime: Foundation.TimeInterval = 0.016, mergeBufferCount: Swift.Int = 6, logDirPath: Swift.String? = nil, allowConsoleLog: Swift.Bool = true, allowConsoleVerboseLog: Swift.Bool = true)
+  @objc deinit
+  public func addDelegate(_ delegate: ScribbleForge.RoomDelegate)
+  public func removeDelegate(_ delegate: ScribbleForge.RoomDelegate)
+  public func leaveRoom(_ handler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func getRecordFile() -> Foundation.URL
+  public func joinRoom(_ completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+}
+public protocol RoomDelegate : AnyObject {
+  func roomConnectionStateDidUpdate(_ room: ScribbleForge.Room, connectionState: ScribbleForge.NetworkConnectionState, info: [Swift.String : Any])
+  func roomUserJoinRoom(_ room: ScribbleForge.Room, user: ScribbleForge.RoomUser)
+  func roomUserLeaveRoom(_ room: ScribbleForge.Room, userId: Swift.String)
+  func roomApplicationDidLaunch(_ room: ScribbleForge.Room, application: ScribbleForge.Application)
+  func roomApplicationDidTerminal(_ room: ScribbleForge.Room, application: ScribbleForge.Application)
+}
+public protocol SnapshotFetcher {
+  func getSnapshot(roomId: Swift.String, completionHandler: @escaping ((Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void))
+}
+public struct DefaultOSSSnapshotFetcher : ScribbleForge.SnapshotFetcher {
+  public func getSnapshot(roomId: Swift.String, completionHandler: @escaping ((Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void))
+}
+public protocol UploaderExecutor {
+  func upload(snapshot: Foundation.Data, completionHandler: @escaping ((Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void))
+  func upload(historyData: Foundation.Data, completionHandler: @escaping ((Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void))
+}
+public struct UserPermissionUpdateEvent {
+}
+public struct RoomUser {
+  public let id: Swift.String
+  public let nickName: Swift.String
+  public let online: Swift.Bool
+}
+@_hasMissingDesignatedInitializers final public class UserManager {
+  final public func idList() -> [Swift.String]
+  final public func getUser(userId: Swift.String) -> ScribbleForge.RoomUser?
+  @objc deinit
+}
+public enum ViewMode {
+  case free
+  case mainView
+  case follow(userId: Swift.String)
+}
+@objc public class Whiteboard : ObjectiveC.NSObject, ScribbleForge.Application {
+  public var applicationView: UIKit.UIView? {
+    get
+  }
+  final public let appId: Swift.String
+  weak public var delegate: ScribbleForge.WhiteboardDelegate? {
+    get
+    set
+  }
+  public var indexedNavigation: ScribbleForge.IndexedNavigation {
+    get
+    set
+  }
+  required public init(appId: Swift.String, userId: Swift.String, userManager: ScribbleForge.UserManager, doc: ScribbleForge.YDoc, option: [Swift.String : Any], extraOptions: [Swift.String : Any]?, launchFinishHandler: (() -> Swift.Void)?)
+  public static var typeIdentifier: Swift.String {
+    get
+  }
+  public func terminal()
+  public func clean()
+  public func setFreeModeUserPageIndex(index: Swift.Int, userId: Swift.String)
+  public func setFreeModeUserPage(id: Swift.String, userId: Swift.String)
+  public func setViewMode(_ viewMode: ScribbleForge.ViewMode, forUserId userId: Swift.String? = nil)
+  public func getViewMode(_ userId: Swift.String? = nil, completionHandler: @escaping ((ScribbleForge.ViewMode) -> Swift.Void))
+  public func undo()
+  public func redo()
+  public func rasterize(pageIndex: Swift.Int? = nil, completionHandler: @escaping ((Swift.Result<UIKit.UIImage, Swift.Error>) -> Swift.Void))
+  public func getPermission(userId: Swift.String? = nil, _ completionHandler: @escaping ((ScribbleForge.WhiteboardPermission) -> Swift.Void))
+  public func setPermission(userId: Swift.String? = nil, permission: ScribbleForge.WhiteboardPermission)
+  public func setBackgroundColor(_ color: UIKit.UIColor)
+  public func setThemeColor(_ color: UIKit.UIColor)
+  public func currentTool() -> ScribbleForge.WhiteboardToolType?
+  public func setCurrentTool(_ toolType: ScribbleForge.WhiteboardToolType)
+  public func fontSize() -> Swift.Float?
+  public func setFontSize(_ size: Swift.Float)
+  public func dashArray() -> [Swift.Float]?
+  public func setDashArray(_ array: [Swift.Float])
+  public func fontFamily() -> Swift.String?
+  public func setFontFamily(_ font: Swift.String)
+  public func strokeColor() -> Swift.String?
+  public func setStrokeColor(_ color: UIKit.UIColor)
+  public func fillColor() -> Swift.String?
+  public func setFillColor(_ color: UIKit.UIColor)
+  public func strokeWidth() -> Swift.Float?
+  public func setStrokeWidth(_ width: Swift.Float)
+  public func setElementAttribute(layerId: Swift.String, elementId: Swift.String, attributeKey: ScribbleForge.ElementAttributesKey, value: Any)
+  public func getElementAttribute(sceneId: Swift.String, elementId: Swift.String, attributeKey: ScribbleForge.ElementAttributesKey, completionHandler: ((Any?) -> Swift.Void)?)
+  @objc deinit
+}
+extension ScribbleForge.Whiteboard : ScribbleForge.WhiteboardDelegate {
+  public func whiteboardUndoStackLengthUpdate(_ board: ScribbleForge.Whiteboard, undoStackLength: Swift.Int)
+  public func whiteboardRedoStackLengthUpdate(_ board: ScribbleForge.Whiteboard, redoStackLength: Swift.Int)
+  public func whiteboardError(_ board: ScribbleForge.Whiteboard, errorCode: Swift.Int, errorMessage: Swift.String)
+  public func whiteboardToolInfoUpdate(_ board: ScribbleForge.Whiteboard, toolInfo: ScribbleForge.WhiteboardToolInfo)
+  public func whiteboardPagePermissionUpdate(_ board: ScribbleForge.Whiteboard, userId: Swift.String, permission: ScribbleForge.WhiteboardPermission)
+  public func whiteboardPageInfoUpdate(_ board: ScribbleForge.Whiteboard, activePageIndex: Swift.Int, pageCount: Swift.Int)
+  public func whiteboardElementSelected(_ board: ScribbleForge.Whiteboard, info: ScribbleForge.WhiteboardSelectInfo)
+  public func whiteboardElementDeselected(_ board: ScribbleForge.Whiteboard)
+  public func whitebaordToolChange(_ board: ScribbleForge.Whiteboard, tool: ScribbleForge.WhiteboardToolType)
+}
+public struct WhiteboardInializeOption {
+  public struct DefaultToolInfo {
+    public init(tool: ScribbleForge.WhiteboardToolType? = nil, fontSize: Swift.Float? = nil, fontFamily: Swift.String? = nil, strokeColor: Swift.String? = nil, fillColor: Swift.String? = nil, strokeWidth: Swift.Float? = nil, dashArray: [Swift.Float]? = nil)
+    public let tool: ScribbleForge.WhiteboardToolType?
+    public let fontSize: Swift.Float?
+    public let fontFamily: Swift.String?
+    public let strokeColor: Swift.String?
+    public let fillColor: Swift.String?
+    public let strokeWidth: Swift.Float?
+    public let dashArray: [Swift.Float]?
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public init(width: Swift.Int, height: Swift.Int, defaultToolInfo: ScribbleForge.WhiteboardInializeOption.DefaultToolInfo? = nil)
+}
+extension ScribbleForge.WhiteboardInializeOption {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension ScribbleForge.Room {
+  public func launchWhiteboard(appId: Swift.String? = nil, option: ScribbleForge.WhiteboardInializeOption? = nil)
+}
+public protocol WhiteboardDelegate : ObjectiveC.NSObject {
+  func whiteboardElementSelected(_ board: ScribbleForge.Whiteboard, info: ScribbleForge.WhiteboardSelectInfo)
+  func whiteboardElementDeselected(_ board: ScribbleForge.Whiteboard)
+  func whiteboardToolInfoUpdate(_ board: ScribbleForge.Whiteboard, toolInfo: ScribbleForge.WhiteboardToolInfo)
+  func whiteboardPageInfoUpdate(_ board: ScribbleForge.Whiteboard, activePageIndex: Swift.Int, pageCount: Swift.Int)
+  func whiteboardUndoStackLengthUpdate(_ board: ScribbleForge.Whiteboard, undoStackLength: Swift.Int)
+  func whiteboardRedoStackLengthUpdate(_ board: ScribbleForge.Whiteboard, redoStackLength: Swift.Int)
+  func whiteboardPagePermissionUpdate(_ board: ScribbleForge.Whiteboard, userId: Swift.String, permission: ScribbleForge.WhiteboardPermission)
+  func whiteboardError(_ board: ScribbleForge.Whiteboard, errorCode: Swift.Int, errorMessage: Swift.String)
+}
+public struct WhiteboardPermission : Swift.OptionSet {
+  public init(rawValue: Swift.Int)
+  public let rawValue: Swift.Int
+  public static let none: ScribbleForge.WhiteboardPermission
+  public static let draw: ScribbleForge.WhiteboardPermission
+  public static let editSelf: ScribbleForge.WhiteboardPermission
+  public static let editOthers: ScribbleForge.WhiteboardPermission
+  public static let deleteSelf: ScribbleForge.WhiteboardPermission
+  public static let deleteOthers: ScribbleForge.WhiteboardPermission
+  public static let mainView: ScribbleForge.WhiteboardPermission
+  public static let setOthersView: ScribbleForge.WhiteboardPermission
+  public static let all: ScribbleForge.WhiteboardPermission
+  public typealias ArrayLiteralElement = ScribbleForge.WhiteboardPermission
+  public typealias Element = ScribbleForge.WhiteboardPermission
+  public typealias RawValue = Swift.Int
+}
+public enum ElementAttributesKey : Swift.String, Swift.Codable {
+  case strokeColor
+  case fillColor
+  case strokeWidth
+  case fontSize
+  case dashArray
+  case headArrow
+  case tailArrow
+  case fontFamily
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct WhiteboardToolInfo : Swift.Decodable {
+  public init(tool: ScribbleForge.WhiteboardToolType, fontSize: Swift.Float, fontFamily: Swift.String, strokeColor: Swift.String, fillColor: Swift.String? = nil, strokeWidth: Swift.Float, dashArray: [Swift.Float])
+  public let tool: ScribbleForge.WhiteboardToolType
+  public let fontSize: Swift.Float
+  public let fontFamily: Swift.String
+  public let strokeColor: Swift.String
+  public let fillColor: Swift.String?
+  public let strokeWidth: Swift.Float
+  public let dashArray: [Swift.Float]
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct WhiteboardSelectInfo : Swift.Codable {
+  public let userId: Swift.String
+  public let layerId: Swift.String
+  public let uuid: Swift.String
+  public let attributes: [ScribbleForge.ElementAttributesKey]
+  public let boundingRect: CoreFoundation.CGRect
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum WhiteboardToolType : Swift.String, Swift.CaseIterable, Swift.Codable {
+  case curve
+  case rectangle
+  case selector
+  case line
+  case text
+  case ellipse
+  case triangle
+  case eraser
+  case laser
+  case arrow
+  case grab
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [ScribbleForge.WhiteboardToolType]
+  public typealias RawValue = Swift.String
+  public static var allCases: [ScribbleForge.WhiteboardToolType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol YConvertible {
+  init?(jsValue: JavaScriptCore.JSValue)
+  func toJsValue(context: JavaScriptCore.JSContext) -> JavaScriptCore.JSValue
+}
+public class YAbscractType : ScribbleForge.YConvertible, Swift.Equatable {
+  final public let jsValue: JavaScriptCore.JSValue
+  public static func == (lhs: ScribbleForge.YAbscractType, rhs: ScribbleForge.YAbscractType) -> Swift.Bool
+  required public init(jsValue: JavaScriptCore.JSValue)
+  public func toJsValue(context _: JavaScriptCore.JSContext) -> JavaScriptCore.JSValue
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class YPlainObject : ScribbleForge.YAbscractType {
+  @discardableResult
+  public func setValue(key: Swift.String, value: Swift.Int) -> Self
+  @discardableResult
+  public func setValue(key: Swift.String, value: Swift.Double) -> Self
+  @discardableResult
+  public func setValue(key: Swift.String, value: Swift.String) -> Self
+  @discardableResult
+  public func setValue(key: Swift.String, value: [Swift.String : Any]) -> Self
+  public func getInt(key: Swift.String) -> Swift.Int?
+  public func getString(key: Swift.String) -> Swift.String?
+  public func getDouble(key: Swift.String) -> Swift.Double?
+  required public init(jsValue: JavaScriptCore.JSValue)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class YInt : ScribbleForge.YAbscractType {
+  public var int: Swift.Int? {
+    get
+  }
+  required public init(jsValue: JavaScriptCore.JSValue)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class YDouble : ScribbleForge.YAbscractType {
+  public var double: Swift.Double? {
+    get
+  }
+  required public init(jsValue: JavaScriptCore.JSValue)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class YBool : ScribbleForge.YAbscractType {
+  public var bool: Swift.Bool? {
+    get
+  }
+  required public init(jsValue: JavaScriptCore.JSValue)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class YString : ScribbleForge.YAbscractType {
+  public var string: Swift.String? {
+    get
+  }
+  required public init(jsValue: JavaScriptCore.JSValue)
+  @objc deinit
+}
+extension Swift.Array : ScribbleForge.YConvertible where Element : ScribbleForge.YConvertible {
+  public init?(jsValue: JavaScriptCore.JSValue)
+  public func toJsValue(context: JavaScriptCore.JSContext) -> JavaScriptCore.JSValue
+}
+extension Foundation.Date : ScribbleForge.YConvertible {
+  public init?(jsValue: JavaScriptCore.JSValue)
+  public func toJsValue(context: JavaScriptCore.JSContext) -> JavaScriptCore.JSValue
+}
+public class YArrayEvent : ScribbleForge.YJSEvent {
+  required public init(jsValue: JavaScriptCore.JSValue)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class YArray<Element> : ScribbleForge.YAbscractType where Element : ScribbleForge.YConvertible {
+  public func observe(handler: @escaping (ScribbleForge.YArrayEvent) -> Swift.Void) -> ScribbleForge.YJSObserver<ScribbleForge.YArrayEvent>
+  public func unobserve(_ observer: ScribbleForge.YJSObserver<ScribbleForge.YArrayEvent>)
+  public var length: Swift.Int {
+    get
+  }
+  @discardableResult
+  public func insert(index: Swift.UInt, content: [Element]) -> Self
+  @discardableResult
+  public func delete(index: Swift.UInt, length: Swift.UInt) -> Self
+  @discardableResult
+  public func push(content: [Element]) -> Self
+  @discardableResult
+  public func unshift(content: [Element]) -> Self
+  public func slice(start: Swift.UInt, end: Swift.UInt? = nil) -> ScribbleForge.YArray<Element>
+  public func get(index: Swift.UInt) -> Element?
+  required public init(jsValue: JavaScriptCore.JSValue)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class YArrayIterator<E> : Swift.IteratorProtocol where E : ScribbleForge.YConvertible {
+  public func next() -> E?
+  public typealias Element = E
+  @objc deinit
+}
+extension ScribbleForge.YArray : Swift.Sequence {
+  public func makeIterator() -> ScribbleForge.YArrayIterator<Element>
+  public typealias Iterator = ScribbleForge.YArrayIterator<Element>
+}
+public class YContext {
+  final public let jsContext: JavaScriptCore.JSContext
+  public init()
+  public func createInt(_ value: Swift.Int) -> ScribbleForge.YInt
+  public func createDouble(_ value: Swift.Double) -> ScribbleForge.YDouble
+  public func createBool(_ value: Swift.Bool) -> ScribbleForge.YBool
+  public func createString(_ value: Swift.String) -> ScribbleForge.YString
+  public func createPlainObject() -> ScribbleForge.YPlainObject
+  public func createDoc() -> ScribbleForge.YDoc
+  public func createMap() -> ScribbleForge.YMap
+  public func createArray<Element>() -> ScribbleForge.YArray<Element> where Element : ScribbleForge.YConvertible
+  public func createUndoManager(scope: ScribbleForge.YAbscractType, trackOrgins: Swift.Set<Swift.String> = [], captureTimeout: Swift.Int = 0) -> ScribbleForge.YUndoManager
+  public func encodeStateAsUpdateToInt8Array(doc: ScribbleForge.YDoc) -> [Swift.UInt8]
+  public func encodeStateAsUpdate(doc: ScribbleForge.YDoc) -> Foundation.Data
+  public func encodeStateAsUpdate(doc: ScribbleForge.YDoc, encodedTargetVector: Foundation.Data) -> Foundation.Data
+  public func encodeStateVectorAsUInt8Array(doc: ScribbleForge.YDoc) -> [Swift.UInt8]
+  public func encodeStateVector(doc: ScribbleForge.YDoc) -> Foundation.Data
+  public func applyUpdate(doc: ScribbleForge.YDoc, buf: Foundation.Data, origin: Swift.String? = nil)
+  public func merge(_ a: Foundation.Data, _ b: Foundation.Data) -> Foundation.Data
+  public func mergeUpdates(_ updates: [Foundation.Data]) -> Foundation.Data?
+  @objc deinit
+}
+extension JavaScriptCore.JSContext {
+  public var yRoot: JavaScriptCore.JSValue {
+    get
+  }
+  public func createYMap() -> ScribbleForge.YMap
+  public func createPlainObject() -> ScribbleForge.YPlainObject
+}
+@_hasMissingDesignatedInitializers public class YDoc {
+  final public let jsValue: JavaScriptCore.JSValue
+  public func toJSON() -> Swift.String
+  @objc deinit
+  public func observeUpdate(_ handler: @escaping (ScribbleForge.JSUInt8ArrayNativeData, ScribbleForge.JSString) -> Swift.Void) -> ScribbleForge.YJS2ParamsObserver<ScribbleForge.JSUInt8ArrayNativeData, ScribbleForge.JSString>
+  public func unobserveUpdate(_ observer: ScribbleForge.YJS2ParamsObserver<ScribbleForge.JSUInt8ArrayNativeData, ScribbleForge.JSString>)
+  public func transact(origin: Swift.String = "default", _ act: @escaping () -> Swift.Void)
+  public func getArray<Element>(id: Swift.String) -> ScribbleForge.YArray<Element> where Element : ScribbleForge.YAbscractType
+  public func getMap(id: Swift.String) -> ScribbleForge.YMap
+}
+public protocol YJSEvent {
+  init(jsValue: JavaScriptCore.JSValue)
+}
+@_hasMissingDesignatedInitializers public class YJSObserver<Event> where Event : ScribbleForge.YJSEvent {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class YJS2ParamsObserver<A, B> where A : ScribbleForge.JSConvertible, B : ScribbleForge.JSConvertible {
+  @objc deinit
+}
+public enum YMapChange {
+  case add(key: Swift.String)
+  case update(key: Swift.String, old: JavaScriptCore.JSValue)
+  case delete(key: Swift.String, old: JavaScriptCore.JSValue)
+}
+public enum YArrayChange {
+  case insert(value: JavaScriptCore.JSValue)
+  case retain(number: Swift.Int)
+  case delete(number: Swift.Int)
+}
+public class YDeepEvent : ScribbleForge.YJSEvent {
+  required public init(jsValue: JavaScriptCore.JSValue)
+  @objc deinit
+}
+public class YMapEvent : ScribbleForge.YJSEvent {
+  final public let changes: [ScribbleForge.YMapChange]
+  final public let target: ScribbleForge.YMap?
+  required public init(jsValue: JavaScriptCore.JSValue)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class YMap : ScribbleForge.YAbscractType {
+  public func parentMap() -> ScribbleForge.YMap?
+  public func toJSON() -> Swift.String
+  public func set<T>(key: Swift.String, value: T) where T : ScribbleForge.YConvertible
+  public func get<T>(key: Swift.String, type: T.Type) -> T? where T : ScribbleForge.YConvertible
+  public func get(key: Swift.String) -> JavaScriptCore.JSValue?
+  public func delete(key: Swift.String)
+  public func has(key: Swift.String) -> Swift.Bool
+  public func size() -> Swift.Int
+  public func keys() -> [Swift.String]
+  public func deepObserve(_ handler: @escaping (ScribbleForge.YDeepEvent) -> Swift.Void) -> ScribbleForge.YJSObserver<ScribbleForge.YDeepEvent>
+  public func observe(_ handler: @escaping (ScribbleForge.YMapEvent) -> Swift.Void) -> ScribbleForge.YJSObserver<ScribbleForge.YMapEvent>
+  public func unobserve(_ observer: ScribbleForge.YJSObserver<ScribbleForge.YMapEvent>)
+  required public init(jsValue: JavaScriptCore.JSValue)
+  @objc deinit
+}
+extension ScribbleForge.YMap {
+  public func set(key: Swift.String, value: Swift.Double)
+  public func set(key: Swift.String, value: Swift.Int)
+  public func set(key: Swift.String, value: Swift.String)
+  public func set(key: Swift.String, value: Swift.Bool)
+}
+extension ScribbleForge.YMap {
+  public func getDouble(key: Swift.String) -> Swift.Double?
+  public func getInt(key: Swift.String) -> Swift.Int?
+  public func getString(key: Swift.String) -> Swift.String?
+}
+@_inheritsConvenienceInitializers public class YText : ScribbleForge.YAbscractType {
+  required public init(jsValue: JavaScriptCore.JSValue)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class YUndoManager {
+  public func undo()
+  public func redo()
+  @objc deinit
+}
+extension ScribbleForge.NetworkConnectionState : Swift.Equatable {}
+extension ScribbleForge.NetworkConnectionState : Swift.Hashable {}
+extension ScribbleForge.WhiteboardInializeOption : Swift.Encodable {}
+extension ScribbleForge.WhiteboardInializeOption : Swift.Decodable {}
+extension ScribbleForge.WhiteboardInializeOption.DefaultToolInfo : Swift.Encodable {}
+extension ScribbleForge.WhiteboardInializeOption.DefaultToolInfo : Swift.Decodable {}
+extension ScribbleForge.ElementAttributesKey : Swift.Equatable {}
+extension ScribbleForge.ElementAttributesKey : Swift.Hashable {}
+extension ScribbleForge.ElementAttributesKey : Swift.RawRepresentable {}
+extension ScribbleForge.WhiteboardToolType : Swift.Equatable {}
+extension ScribbleForge.WhiteboardToolType : Swift.Hashable {}
+extension ScribbleForge.WhiteboardToolType : Swift.RawRepresentable {}

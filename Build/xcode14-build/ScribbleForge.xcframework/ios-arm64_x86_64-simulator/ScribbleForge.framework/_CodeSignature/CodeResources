@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ScribbleForge-Swift.h</key>
 		<data>
-		M+nfZB2osfPUaUmeIhwzvJvFGTc=
+		4nrK+uzEpn5SL1YDZos5HSV5SDE=
 		</data>
 		<key>Headers/ScribbleForge-umbrella.h</key>
 		<data>
@@ -14,55 +14,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		aLsrVvBZ+gUFqJgapeFOv0EhQd8=
-		</data>
-		<key>Modules/ScribbleForge.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
-		<data>
-		z7gCQ/XyCwaTqvRVFx1krCXRpGg=
-		</data>
-		<key>Modules/ScribbleForge.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
-		<data>
-		cLOMRfNs2i2sK4fPg/sPBc4UBlk=
+		MDoxZzoTXE9Xavhkasi/N5MGNno=
 		</data>
 		<key>Modules/ScribbleForge.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		BWVLmQRTO6QCFe5flIl6ekSW9DY=
+		lf4zAzQ3YKpQ03h2LhPrQN+v73U=
 		</data>
 		<key>Modules/ScribbleForge.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		cLOMRfNs2i2sK4fPg/sPBc4UBlk=
+		vGx5Jwd6YOezyQQnntkM854msw4=
 		</data>
 		<key>Modules/ScribbleForge.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		xnMqEY65Kp6ZMAR2ONDyDjgZ5OQ=
-		</data>
-		<key>Modules/ScribbleForge.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
-		<data>
-		z7gCQ/XyCwaTqvRVFx1krCXRpGg=
-		</data>
-		<key>Modules/ScribbleForge.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
-		<data>
-		Zgg8j1M89nlz4nDJ3ORJ3XZo0fU=
+		0f47DQHNZaEQiZbKEw/fuqnpWt8=
 		</data>
 		<key>Modules/ScribbleForge.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		AKRoEmNHVJQCHlNAJRXV3HoIxHc=
+		onDRbQ4i7s8ptCiRdMdlv4BScMc=
 		</data>
 		<key>Modules/ScribbleForge.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Zgg8j1M89nlz4nDJ3ORJ3XZo0fU=
+		Zq/d/+GwQ+clUrewlxkFSudXHOM=
 		</data>
 		<key>Modules/ScribbleForge.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		2JI22FCL7vteGJdVJme2/v3jRVU=
+		QIzYHMK3iSCBGJWIfkUoNVXhWFI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		fnEUnOCMgjdTIU/EVuV4XQ9Bxa0=
+		1iXx9xFXY7jfDnmeLz7EeVeUh44=
 		</data>
 		<key>resource.bundle/Info.plist</key>
 		<data>
-		jWrnTDr9AwLZQsXwh3hkfg3DN9U=
+		OYyeOti41dQSnfZudpl129+x3fg=
 		</data>
 		<key>resource.bundle/Whiteboard/141ca0a</key>
 		<data>
@@ -83,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4bX84/AROrMq9Eq33W48owDJ2udXyOP049ts+D7swnI=
+			OJY0IXHInrp0S9XGOImOHQkKo5CthgbxavDw0z2w0oo=
 			</data>
 		</dict>
 		<key>Headers/ScribbleForge-umbrella.h</key>
@@ -93,88 +77,60 @@
 			nb5sHIW8abt+N6g5Wi2ISdvkM1UFwTg82h4bzIQcT/k=
 			</data>
 		</dict>
-		<key>Modules/ScribbleForge.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			RIvfE7gAQzQcQ0FGwNI2Wwuh5AoPKy+4iFP/UFn3IGw=
-			</data>
-		</dict>
-		<key>Modules/ScribbleForge.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fMqpLnqUa9w2RL7SkJeXE+c3xY29qDWlcwmb2QjKVrQ=
-			</data>
-		</dict>
 		<key>Modules/ScribbleForge.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yVE6nmtnHjLyiyqklgSLCd2e0ECkllURLIwgiGXUMWg=
+			CCWQ6L3Chj/cfQlqGZrSIj9hxMcXrgSFiVUVo3GBYrw=
 			</data>
 		</dict>
 		<key>Modules/ScribbleForge.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fMqpLnqUa9w2RL7SkJeXE+c3xY29qDWlcwmb2QjKVrQ=
+			xxmctwtvrCfXLTSIZGy+Q5yyR45kV1ZMekEq/fBNpF8=
 			</data>
 		</dict>
 		<key>Modules/ScribbleForge.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FmFB2Y1JUcJsCvXhdpp2RtwFOqEW3a0EuXOqMbvdaHk=
-			</data>
-		</dict>
-		<key>Modules/ScribbleForge.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			RIvfE7gAQzQcQ0FGwNI2Wwuh5AoPKy+4iFP/UFn3IGw=
-			</data>
-		</dict>
-		<key>Modules/ScribbleForge.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			cY9NJ9KK6QH7zdLBMdhKdjCoMA2BqLbQ4ksL4QmMbTU=
+			sjQqHgr3/sAbxZlG8mKPRyyt0czWxYQheIUeRFmcC9g=
 			</data>
 		</dict>
 		<key>Modules/ScribbleForge.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wMjnnoiHy8lfSrcIWyUJfG7+BVub/cfIpknVk1No1Cw=
+			5Vy/pIpxEUmmmQGODNP1ohtw1Bj8KGnlQc9N4VaIaGw=
 			</data>
 		</dict>
 		<key>Modules/ScribbleForge.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cY9NJ9KK6QH7zdLBMdhKdjCoMA2BqLbQ4ksL4QmMbTU=
+			xL+uT1y6KTGl/fFLveWaOFycNsCpbdUmJOq8MCWFopk=
 			</data>
 		</dict>
 		<key>Modules/ScribbleForge.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s4Aryht1kQtbtGIh4lq6tgYgPFsbAwmfWg5OX6Mowe4=
+			nRX/PMORJrdVkNMlYwZ50RDi5REPfoAwbF2PjjaDqU4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2wWqqQotGCtG4dM3SXUmB7wxTU258L7pDRVV93j0RH4=
+			U4xFyXCBFpKZgSpDh3pc4dAA9TjbaHKTB0OTdkxZDmo=
 			</data>
 		</dict>
 		<key>resource.bundle/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IwoVV1Uc5pj0v5z6KunrMcMRtJABuKrd+RsCOStvO1Q=
+			noswgYVmdORFHmrZQ+SONPggL2PWz7YmLAarb1ufsD0=
 			</data>
 		</dict>
 		<key>resource.bundle/Whiteboard/141ca0a</key>

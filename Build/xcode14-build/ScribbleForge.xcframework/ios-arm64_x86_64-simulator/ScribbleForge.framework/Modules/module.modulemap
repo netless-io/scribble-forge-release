@@ -6,6 +6,6 @@ framework module ScribbleForge {
 }
 
 module ScribbleForge.Swift {
-  header "ScribbleForge-Swift.h"
-  requires objc
+    header "ScribbleForge-Swift.h"
+    requires objc
 }

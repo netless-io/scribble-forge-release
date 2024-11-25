@@ -18345,28 +18345,28 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Network\/ChunkedNetworkAdaptor.swift",
       "kind": "BooleanLiteral",
-      "offset": 2039,
+      "offset": 2088,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Network\/ChunkedNetworkAdaptor.swift",
       "kind": "Array",
-      "offset": 2218,
+      "offset": 2267,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Network\/ChunkedNetworkAdaptor.swift",
       "kind": "Array",
-      "offset": 2271,
+      "offset": 2320,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Network\/ChunkedNetworkAdaptor.swift",
       "kind": "FloatLiteral",
-      "offset": 2406,
+      "offset": 2455,
       "length": 5,
       "value": "0.016"
     },
@@ -18961,28 +18961,28 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/RemoteLogger.swift",
       "kind": "Array",
-      "offset": 527,
+      "offset": 1318,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/RemoteLogger.swift",
       "kind": "BooleanLiteral",
-      "offset": 550,
+      "offset": 1341,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/RemoteLogger.swift",
       "kind": "Array",
-      "offset": 597,
+      "offset": 1388,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Analysis\/RemoteLogger.swift",
       "kind": "StringLiteral",
-      "offset": 652,
+      "offset": 1443,
       "length": 38,
       "value": "\"com.remote-log-upload.scribble-forge\""
     },

@@ -261,8 +261,6 @@ public struct WhiteboardInializeOption {
     public init(from decoder: any Swift.Decoder) throws
   }
   public init(width: Swift.Int, height: Swift.Int, defaultToolInfo: ScribbleForge.WhiteboardInializeOption.DefaultToolInfo? = nil)
-}
-extension ScribbleForge.WhiteboardInializeOption {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }

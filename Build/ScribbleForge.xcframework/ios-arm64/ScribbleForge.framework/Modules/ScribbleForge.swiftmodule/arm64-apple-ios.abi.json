@@ -8353,6 +8353,33 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge24WhiteboardInializeOptionV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV6encode2toys7Encoder_p_tKF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(from:)",
@@ -8374,36 +8401,11 @@
             "usr": "s:13ScribbleForge24WhiteboardInializeOptionV4fromACs7Decoder_p_tKcfc",
             "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV4fromACs7Decoder_p_tKcfc",
             "moduleName": "ScribbleForge",
-            "implicit": true,
-            "isFromExtension": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
             "throwing": true,
             "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "encode",
-            "printedName": "encode(to:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Encoder",
-                "printedName": "any Swift.Encoder",
-                "usr": "s:s7EncoderP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13ScribbleForge24WhiteboardInializeOptionV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV6encode2toys7Encoder_p_tKF",
-            "moduleName": "ScribbleForge",
-            "implicit": true,
-            "isFromExtension": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -19031,28 +19033,28 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "FloatLiteral",
-      "offset": 2669,
+      "offset": 3391,
       "length": 5,
       "value": "0.016"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "IntegerLiteral",
-      "offset": 2716,
+      "offset": 3438,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 2802,
+      "offset": 3524,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 2855,
+      "offset": 3577,
       "length": 4,
       "value": "true"
     },

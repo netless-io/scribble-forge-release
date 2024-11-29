@@ -1,5 +1,8 @@
 # CHANGELOG
 
+### 0.1.21
+- Join leave room pair detect with error logs. 
+
 ### 0.1.20
 - Add denpendencies value in pack script.
 - Fix default tool.

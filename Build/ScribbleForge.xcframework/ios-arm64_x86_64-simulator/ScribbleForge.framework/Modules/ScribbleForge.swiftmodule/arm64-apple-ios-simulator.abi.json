@@ -18990,71 +18990,78 @@
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
+      "kind": "Dictionary",
+      "offset": 87,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 61,
+      "offset": 119,
       "length": 15,
       "value": "\"initVectorReq\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 105,
+      "offset": 163,
       "length": 15,
       "value": "\"initVectorRes\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 749,
+      "offset": 807,
       "length": 21,
       "value": "\"scribble-forge.data\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 795,
+      "offset": 853,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 1177,
+      "offset": 1235,
       "length": 6,
       "value": "\"diff\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 1221,
+      "offset": 1279,
       "length": 10,
       "value": "\"conflict\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "FloatLiteral",
-      "offset": 3391,
+      "offset": 3449,
       "length": 5,
       "value": "0.016"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "IntegerLiteral",
-      "offset": 3438,
+      "offset": 3496,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 3524,
+      "offset": 3582,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 3577,
+      "offset": 3635,
       "length": 4,
       "value": "true"
     },

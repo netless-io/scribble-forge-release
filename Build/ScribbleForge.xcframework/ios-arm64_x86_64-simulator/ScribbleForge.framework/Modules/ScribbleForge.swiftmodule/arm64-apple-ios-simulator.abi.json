@@ -7175,6 +7175,156 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "translateCamera",
+            "printedName": "translateCamera(offset:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge10WhiteboardC15translateCamera6offsetySo7CGPointV_tF",
+            "mangledName": "$s13ScribbleForge10WhiteboardC15translateCamera6offsetySo7CGPointV_tF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "scaleCamera",
+            "printedName": "scaleCamera(scale:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge10WhiteboardC11scaleCamera0D0y14CoreFoundation7CGFloatV_tF",
+            "mangledName": "$s13ScribbleForge10WhiteboardC11scaleCamera0D0y12CoreGraphics7CGFloatV_tF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resetCamera",
+            "printedName": "resetCamera()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge10WhiteboardC11resetCamerayyF",
+            "mangledName": "$s13ScribbleForge10WhiteboardC11resetCamerayyF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enableCameraTranslate",
+            "printedName": "enableCameraTranslate(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge10WhiteboardC21enableCameraTranslateyySbF",
+            "mangledName": "$s13ScribbleForge10WhiteboardC21enableCameraTranslateyySbF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enableCameraBoundaryHighlight",
+            "printedName": "enableCameraBoundaryHighlight(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge10WhiteboardC29enableCameraBoundaryHighlightyySbF",
+            "mangledName": "$s13ScribbleForge10WhiteboardC29enableCameraBoundaryHighlightyySbF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setCameraBoundaryColor",
+            "printedName": "setCameraBoundaryColor(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge10WhiteboardC22setCameraBoundaryColoryySo7UIColorCF",
+            "mangledName": "$s13ScribbleForge10WhiteboardC22setCameraBoundaryColoryySo7UIColorCF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -8307,7 +8457,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(width:height:defaultToolInfo:)",
+            "printedName": "init(width:height:maxScaleRatio:defaultToolInfo:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -8330,6 +8480,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
                 "printedName": "ScribbleForge.WhiteboardInializeOption.DefaultToolInfo?",
                 "children": [
                   {
@@ -8344,11 +8509,12 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13ScribbleForge24WhiteboardInializeOptionV5width6height15defaultToolInfoACSi_SiAC07DefaultiJ0VSgtcfc",
-            "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV5width6height15defaultToolInfoACSi_SiAC07DefaultiJ0VSgtcfc",
+            "usr": "s:13ScribbleForge24WhiteboardInializeOptionV5width6height13maxScaleRatio15defaultToolInfoACSi_Si14CoreFoundation7CGFloatVSgAC07DefaultlM0VSgtcfc",
+            "mangledName": "$s13ScribbleForge24WhiteboardInializeOptionV5width6height13maxScaleRatio15defaultToolInfoACSi_Si12CoreGraphics7CGFloatVSgAC07DefaultlM0VSgtcfc",
             "moduleName": "ScribbleForge",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
           },

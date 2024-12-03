@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ScribbleForge'
-  s.version          = '0.1.21'
+  s.version          = '0.1.22'
   s.license          = { :type => 'MIT', :text => 'Copyright netless 2024' }
   s.summary          = 'Interacetive whiteboard SDK.'
   s.description      = 'Next generation Interacetive whiteboard SDK.'
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Basic' do |s|
     s.vendored_frameworks = 'Build/ScribbleForge.xcframework'
-    s.dependency 'NTLBridge'
+    s.dependency 'NTLBridge', '3.2.0'
     s.dependency 'RxSwift'
   end
 

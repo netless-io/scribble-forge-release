@@ -234,6 +234,12 @@ public enum ViewMode {
   public func setStrokeWidth(_ width: Swift.Float)
   public func setElementAttribute(layerId: Swift.String, elementId: Swift.String, attributeKey: ScribbleForge.ElementAttributesKey, value: Any)
   public func getElementAttribute(sceneId: Swift.String, elementId: Swift.String, attributeKey: ScribbleForge.ElementAttributesKey, completionHandler: ((Any?) -> Swift.Void)?)
+  public func translateCamera(offset: CoreFoundation.CGPoint)
+  public func scaleCamera(scale: CoreFoundation.CGFloat)
+  public func resetCamera()
+  public func enableCameraTranslate(_ enable: Swift.Bool)
+  public func enableCameraBoundaryHighlight(_ enable: Swift.Bool)
+  public func setCameraBoundaryColor(_ color: UIKit.UIColor)
   @objc deinit
 }
 extension ScribbleForge.Whiteboard : ScribbleForge.WhiteboardDelegate {
@@ -260,7 +266,7 @@ public struct WhiteboardInializeOption {
     public func encode(to encoder: any Swift.Encoder) throws
     public init(from decoder: any Swift.Decoder) throws
   }
-  public init(width: Swift.Int, height: Swift.Int, defaultToolInfo: ScribbleForge.WhiteboardInializeOption.DefaultToolInfo? = nil)
+  public init(width: Swift.Int, height: Swift.Int, maxScaleRatio: CoreFoundation.CGFloat? = nil, defaultToolInfo: ScribbleForge.WhiteboardInializeOption.DefaultToolInfo? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }

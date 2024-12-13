@@ -4390,6 +4390,37 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(key:value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge4RoomC3set3key5valueySS_yptF",
+            "mangledName": "$s13ScribbleForge4RoomC3set3key5valueySS_yptF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -5588,6 +5619,400 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "RasterizeOption",
+        "printedName": "RasterizeOption",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "viewport",
+            "printedName": "viewport",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScribbleForge.RasterizeOption.Type) -> (ScribbleForge.PageIdentifier?, CoreGraphics.CGFloat) -> ScribbleForge.RasterizeOption",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ScribbleForge.PageIdentifier?, CoreGraphics.CGFloat) -> ScribbleForge.RasterizeOption",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RasterizeOption",
+                        "printedName": "ScribbleForge.RasterizeOption",
+                        "usr": "s:13ScribbleForge15RasterizeOptionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(page: ScribbleForge.PageIdentifier?, scale: CoreGraphics.CGFloat)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "ScribbleForge.PageIdentifier?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "PageIdentifier",
+                                "printedName": "ScribbleForge.PageIdentifier",
+                                "usr": "s:13ScribbleForge14PageIdentifierO"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScribbleForge.RasterizeOption.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RasterizeOption",
+                        "printedName": "ScribbleForge.RasterizeOption",
+                        "usr": "s:13ScribbleForge15RasterizeOptionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13ScribbleForge15RasterizeOptionO8viewportyAcA14PageIdentifierOSg_14CoreFoundation7CGFloatVtcACmF",
+            "mangledName": "$s13ScribbleForge15RasterizeOptionO8viewportyAcA14PageIdentifierOSg_12CoreGraphics7CGFloatVtcACmF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maxBounds",
+            "printedName": "maxBounds",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScribbleForge.RasterizeOption.Type) -> (ScribbleForge.PageIdentifier?, CoreGraphics.CGFloat) -> ScribbleForge.RasterizeOption",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ScribbleForge.PageIdentifier?, CoreGraphics.CGFloat) -> ScribbleForge.RasterizeOption",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RasterizeOption",
+                        "printedName": "ScribbleForge.RasterizeOption",
+                        "usr": "s:13ScribbleForge15RasterizeOptionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(page: ScribbleForge.PageIdentifier?, scale: CoreGraphics.CGFloat)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "ScribbleForge.PageIdentifier?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "PageIdentifier",
+                                "printedName": "ScribbleForge.PageIdentifier",
+                                "usr": "s:13ScribbleForge14PageIdentifierO"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScribbleForge.RasterizeOption.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RasterizeOption",
+                        "printedName": "ScribbleForge.RasterizeOption",
+                        "usr": "s:13ScribbleForge15RasterizeOptionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13ScribbleForge15RasterizeOptionO9maxBoundsyAcA14PageIdentifierOSg_14CoreFoundation7CGFloatVtcACmF",
+            "mangledName": "$s13ScribbleForge15RasterizeOptionO9maxBoundsyAcA14PageIdentifierOSg_12CoreGraphics7CGFloatVtcACmF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "elementsBounds",
+            "printedName": "elementsBounds",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScribbleForge.RasterizeOption.Type) -> (ScribbleForge.PageIdentifier?, CoreGraphics.CGFloat, CoreGraphics.CGFloat) -> ScribbleForge.RasterizeOption",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ScribbleForge.PageIdentifier?, CoreGraphics.CGFloat, CoreGraphics.CGFloat) -> ScribbleForge.RasterizeOption",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RasterizeOption",
+                        "printedName": "ScribbleForge.RasterizeOption",
+                        "usr": "s:13ScribbleForge15RasterizeOptionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(page: ScribbleForge.PageIdentifier?, maxWidth: CoreGraphics.CGFloat, maxHeight: CoreGraphics.CGFloat)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "ScribbleForge.PageIdentifier?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "PageIdentifier",
+                                "printedName": "ScribbleForge.PageIdentifier",
+                                "usr": "s:13ScribbleForge14PageIdentifierO"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScribbleForge.RasterizeOption.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RasterizeOption",
+                        "printedName": "ScribbleForge.RasterizeOption",
+                        "usr": "s:13ScribbleForge15RasterizeOptionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13ScribbleForge15RasterizeOptionO14elementsBoundsyAcA14PageIdentifierOSg_14CoreFoundation7CGFloatVAJtcACmF",
+            "mangledName": "$s13ScribbleForge15RasterizeOptionO14elementsBoundsyAcA14PageIdentifierOSg_12CoreGraphics7CGFloatVAJtcACmF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13ScribbleForge15RasterizeOptionO",
+        "mangledName": "$s13ScribbleForge15RasterizeOptionO",
+        "moduleName": "ScribbleForge",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PageIdentifier",
+        "printedName": "PageIdentifier",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "index",
+            "printedName": "index",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScribbleForge.PageIdentifier.Type) -> (Swift.Int) -> ScribbleForge.PageIdentifier",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> ScribbleForge.PageIdentifier",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PageIdentifier",
+                        "printedName": "ScribbleForge.PageIdentifier",
+                        "usr": "s:13ScribbleForge14PageIdentifierO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScribbleForge.PageIdentifier.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PageIdentifier",
+                        "printedName": "ScribbleForge.PageIdentifier",
+                        "usr": "s:13ScribbleForge14PageIdentifierO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13ScribbleForge14PageIdentifierO5indexyACSicACmF",
+            "mangledName": "$s13ScribbleForge14PageIdentifierO5indexyACSicACmF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScribbleForge.PageIdentifier.Type) -> (Swift.String) -> ScribbleForge.PageIdentifier",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ScribbleForge.PageIdentifier",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PageIdentifier",
+                        "printedName": "ScribbleForge.PageIdentifier",
+                        "usr": "s:13ScribbleForge14PageIdentifierO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScribbleForge.PageIdentifier.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PageIdentifier",
+                        "printedName": "ScribbleForge.PageIdentifier",
+                        "usr": "s:13ScribbleForge14PageIdentifierO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13ScribbleForge14PageIdentifierO2idyACSScACmF",
+            "mangledName": "$s13ScribbleForge14PageIdentifierO2idyACSScACmF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13ScribbleForge14PageIdentifierO",
+        "mangledName": "$s13ScribbleForge14PageIdentifierO",
+        "moduleName": "ScribbleForge",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "ViewMode",
         "printedName": "ViewMode",
         "children": [
@@ -6447,7 +6872,7 @@
           {
             "kind": "Function",
             "name": "rasterize",
-            "printedName": "rasterize(pageIndex:completionHandler:)",
+            "printedName": "rasterize(option:completionHandler:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6456,18 +6881,10 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Int?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
+                "name": "RasterizeOption",
+                "printedName": "ScribbleForge.RasterizeOption",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:13ScribbleForge15RasterizeOptionO"
               },
               {
                 "kind": "TypeFunc",
@@ -6503,8 +6920,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13ScribbleForge10WhiteboardC9rasterize9pageIndex17completionHandlerySiSg_ys6ResultOySo7UIImageCs5Error_pGctF",
-            "mangledName": "$s13ScribbleForge10WhiteboardC9rasterize9pageIndex17completionHandlerySiSg_ys6ResultOySo7UIImageCs5Error_pGctF",
+            "usr": "s:13ScribbleForge10WhiteboardC9rasterize6option17completionHandleryAA15RasterizeOptionO_ys6ResultOySo7UIImageCs5Error_pGctF",
+            "mangledName": "$s13ScribbleForge10WhiteboardC9rasterize6option17completionHandleryAA15RasterizeOptionO_ys6ResultOySo7UIImageCs5Error_pGctF",
             "moduleName": "ScribbleForge",
             "declAttributes": [
               "AccessControl",
@@ -18506,42 +18923,56 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Network\/ChunkedNetworkAdaptor.swift",
       "kind": "IntegerLiteral",
-      "offset": 855,
+      "offset": 543,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Network\/ChunkedNetworkAdaptor.swift",
       "kind": "BooleanLiteral",
-      "offset": 2088,
+      "offset": 1780,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Network\/ChunkedNetworkAdaptor.swift",
       "kind": "Array",
-      "offset": 2267,
+      "offset": 1959,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Network\/ChunkedNetworkAdaptor.swift",
       "kind": "Array",
-      "offset": 2320,
+      "offset": 2012,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Network\/ChunkedNetworkAdaptor.swift",
+      "kind": "StringLiteral",
+      "offset": 2158,
+      "length": 28,
+      "value": "\"Update random message loss\""
+    },
+    {
+      "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Network\/ChunkedNetworkAdaptor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2109,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Network\/ChunkedNetworkAdaptor.swift",
       "kind": "FloatLiteral",
-      "offset": 2455,
+      "offset": 2295,
       "length": 5,
       "value": "0.016"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/ConflictBox.swift",
       "kind": "Dictionary",
-      "offset": 281,
+      "offset": 335,
       "length": 3,
       "value": "[]"
     },
@@ -19332,9 +19763,16 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Apps\/Whiteboard\/Whiteboard.swift",
       "kind": "StringLiteral",
-      "offset": 561,
+      "offset": 2232,
       "length": 31,
       "value": "\"[API] set whitebaord delegate\""
+    },
+    {
+      "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Apps\/Whiteboard\/Whiteboard.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7743,
+      "length": 1,
+      "value": "1"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Apps\/Whiteboard\/WhiteboardPermission.swift",

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ScribbleForge'
-  s.version          = '0.1.24'
+  s.version          = '0.1.25'
   s.license          = { :type => 'MIT', :text => 'Copyright netless 2024' }
   s.summary          = 'Interacetive whiteboard SDK.'
   s.description      = 'Next generation Interacetive whiteboard SDK.'
@@ -16,6 +16,12 @@ Pod::Spec.new do |s|
     s.dependency 'RxSwift'
   end
 
+  s.subspec 'Basic-XCode13' do |s|
+    s.vendored_frameworks = 'Build/xcode13-build/ScribbleForge.xcframework'
+    s.dependency 'NTLBridge'
+    s.dependency 'RxSwift', '6.2.0'
+  end
+
   s.subspec 'AgoraRtm2.1.x' do |s|
     s.dependency 'AgoraRtm_iOS', '~> 2.1.12'
     s.dependency 'ScribbleForge/Basic'
@@ -29,6 +35,11 @@ Pod::Spec.new do |s|
   s.subspec 'AgoraRtm2.2.x' do |s|
     s.dependency 'AgoraRtm', '~> 2.2.2'
     s.dependency 'ScribbleForge/Basic'
+  end
+
+  s.subspec 'AgoraSpecial' do |s|
+    s.dependency 'AgoraRtm/RtmKit', '~> 2.2.2'
+    s.dependency 'ScribbleForge/Basic-XCode13'
   end
  
   s.default_subspec = 'AgoraRtm2.1.x'

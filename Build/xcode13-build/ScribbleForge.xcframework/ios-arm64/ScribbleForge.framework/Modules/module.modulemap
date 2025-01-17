@@ -1,0 +1,11 @@
+framework module ScribbleForge {
+  umbrella header "ScribbleForge-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module ScribbleForge.Swift {
+    header "ScribbleForge-Swift.h"
+    requires objc
+}

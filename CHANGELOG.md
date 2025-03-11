@@ -1,8 +1,12 @@
 # CHANGELOG
 
+### 0.1.26
+
+- AgoraSpecial
+
 ### 0.1.25
 
-- Get AgoraSpecial version back. 
+- Get AgoraSpecial version back.
 
 ### 0.1.22
 

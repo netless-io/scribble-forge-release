@@ -476,6 +476,7 @@ public class YContext {
   public func encodeStateAsUpdate(doc: ScribbleForge.YDoc) -> Foundation.Data
   public func encodeStateAsUpdate(doc: ScribbleForge.YDoc, encodedTargetVector: Foundation.Data) -> Foundation.Data
   public func encodeStateVectorAsUInt8Array(doc: ScribbleForge.YDoc) -> [Swift.UInt8]
+  public func decodeUpdateFrom(buf: Foundation.Data) -> (Swift.Int, Swift.Int)
   public func encodeStateVector(doc: ScribbleForge.YDoc) -> Foundation.Data
   public func applyUpdate(doc: ScribbleForge.YDoc, buf: Foundation.Data, origin: Swift.String? = nil)
   public func merge(_ a: Foundation.Data, _ b: Foundation.Data) -> Foundation.Data

@@ -3650,6 +3650,13 @@
       },
       {
         "kind": "Import",
+        "name": "JavaScriptCore",
+        "printedName": "JavaScriptCore",
+        "declKind": "Import",
+        "moduleName": "ScribbleForge"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -14272,6 +14279,47 @@
           },
           {
             "kind": "Function",
+            "name": "decodeUpdateFrom",
+            "printedName": "decodeUpdateFrom(buf:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(Swift.Int, Swift.Int)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ScribbleForge8YContextC16decodeUpdateFrom3bufSi_Sit10Foundation4DataV_tF",
+            "mangledName": "$s13ScribbleForge8YContextC16decodeUpdateFrom3bufSi_Sit10Foundation4DataV_tF",
+            "moduleName": "ScribbleForge",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "encodeStateVector",
             "printedName": "encodeStateVector(doc:)",
             "children": [
@@ -18972,7 +19020,7 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/ConflictBox.swift",
       "kind": "Dictionary",
-      "offset": 335,
+      "offset": 1428,
       "length": 3,
       "value": "[]"
     },
@@ -19588,77 +19636,84 @@
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "Dictionary",
-      "offset": 87,
+      "offset": 109,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 119,
+      "offset": 141,
       "length": 15,
       "value": "\"initVectorReq\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 163,
+      "offset": 185,
       "length": 15,
       "value": "\"initVectorRes\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 807,
+      "offset": 829,
       "length": 21,
       "value": "\"scribble-forge.data\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
+      "kind": "Dictionary",
+      "offset": 904,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 853,
+      "offset": 1003,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 1235,
+      "offset": 1385,
       "length": 6,
       "value": "\"diff\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "StringLiteral",
-      "offset": 1279,
+      "offset": 1429,
       "length": 10,
       "value": "\"conflict\""
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "FloatLiteral",
-      "offset": 3449,
+      "offset": 3599,
       "length": 5,
       "value": "0.016"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "IntegerLiteral",
-      "offset": 3496,
+      "offset": 3646,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 3582,
+      "offset": 3732,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xuyunshi\/ScribbleForge\/ScribbleForge\/Classes\/Basic\/Room\/Room.swift",
       "kind": "BooleanLiteral",
-      "offset": 3635,
+      "offset": 3785,
       "length": 4,
       "value": "true"
     },

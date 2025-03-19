@@ -2,7 +2,8 @@
 
 ### 0.1.26
 
-- AgoraSpecial
+@netless/forge-room@0.1.6
+@netless/forge-whiteboard@0.1.11
 
 ### 0.1.25
 

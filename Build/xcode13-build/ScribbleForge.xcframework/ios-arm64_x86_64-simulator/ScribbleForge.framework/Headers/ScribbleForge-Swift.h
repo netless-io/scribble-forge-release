@@ -198,6 +198,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import ObjectiveC;
+@import QuartzCore;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -219,6 +220,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
 SWIFT_CLASS("_TtC13ScribbleForge4Room")
 @interface Room : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -229,11 +231,29 @@ SWIFT_CLASS("_TtC13ScribbleForge4Room")
 
 
 
+
+
 SWIFT_CLASS("_TtC13ScribbleForge10Whiteboard")
 @interface Whiteboard : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
+
+SWIFT_CLASS("_TtC13ScribbleForge13WindowManager")
+@interface WindowManager : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class CAAnimation;
+
+@interface WindowManager (SWIFT_EXTENSION(ScribbleForge)) <CAAnimationDelegate>
+- (void)animationDidStop:(CAAnimation * _Nonnull)_ finished:(BOOL)_;
+@end
+
+
 
 
 #if __has_attribute(external_source_symbol)
@@ -441,6 +461,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import ObjectiveC;
+@import QuartzCore;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -462,6 +483,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
 SWIFT_CLASS("_TtC13ScribbleForge4Room")
 @interface Room : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -472,11 +494,29 @@ SWIFT_CLASS("_TtC13ScribbleForge4Room")
 
 
 
+
+
 SWIFT_CLASS("_TtC13ScribbleForge10Whiteboard")
 @interface Whiteboard : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
+
+SWIFT_CLASS("_TtC13ScribbleForge13WindowManager")
+@interface WindowManager : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class CAAnimation;
+
+@interface WindowManager (SWIFT_EXTENSION(ScribbleForge)) <CAAnimationDelegate>
+- (void)animationDidStop:(CAAnimation * _Nonnull)_ finished:(BOOL)_;
+@end
+
+
 
 
 #if __has_attribute(external_source_symbol)

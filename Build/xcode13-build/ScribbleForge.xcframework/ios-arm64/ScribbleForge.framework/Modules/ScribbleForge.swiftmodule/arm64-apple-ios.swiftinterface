@@ -3,13 +3,16 @@
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ScribbleForge
 import AgoraRtmKit
 import Combine
+import Darwin
 import Dispatch
 import Foundation
 import JavaScriptCore
 import NTLBridge
+import PDFKit
 import RxSwift
 @_exported import ScribbleForge
 import Swift
+import UIKit
 import WebKit
 import _Concurrency
 extension AgoraRtmKit.AgoraRtmClientKit : ScribbleForge.NetworkProvider {
@@ -28,16 +31,8 @@ extension AgoraRtmKit.AgoraRtmClientKit : ScribbleForge.NetworkProvider {
   public func addUserLeaveListener(_ listener: @escaping ((Swift.String) -> Swift.Void))
   public func getUsersSnapshot(_ completionHandler: @escaping ((Swift.Result<[Swift.String], Swift.Error>) -> Swift.Void))
 }
-public enum Region : Swift.Equatable {
-  case cn_hz
-  case custom(endPoint: Swift.String)
-  public var endPoint: Swift.String {
-    get
-  }
-  public static func == (a: ScribbleForge.Region, b: ScribbleForge.Region) -> Swift.Bool
-}
 extension ScribbleForge.Room {
-  convenience public init(roomId: Swift.String, userId: Swift.String, nickName: Swift.String, token: Swift.String, agoraRtmKit: AgoraRtmKit.AgoraRtmClientKit, region: ScribbleForge.Region, logDirPath: Swift.String? = nil, allowRemoteLog: Swift.Bool = true, allowConsoleLog: Swift.Bool = true, allowConsoleVerboseLog: Swift.Bool = false, useSnapshotFetch: Swift.Bool = true)
+  convenience public init(joinRoomOptions: ScribbleForge.JoinRoomOptions, agoraRtmKit: AgoraRtmKit.AgoraRtmClientKit)
 }
 public protocol Application {
   static var typeIdentifier: Swift.String { get }
@@ -76,6 +71,14 @@ extension UIKit.UIColor {
   convenience public init(hex: Swift.String)
   public func toHexString() -> Swift.String
 }
+public enum Region : Swift.Equatable {
+  case cn_hz
+  case custom(endPoint: Swift.String)
+  public var endPoint: Swift.String {
+    get
+  }
+  public static func == (a: ScribbleForge.Region, b: ScribbleForge.Region) -> Swift.Bool
+}
 @_hasMissingDesignatedInitializers public class IndexedNavigation {
   public func pageCount(completionHandler: @escaping ((Swift.Int) -> Swift.Void))
   public func currentPageIndex(completionHandler: @escaping ((Swift.Int) -> Swift.Void))
@@ -86,6 +89,28 @@ extension UIKit.UIColor {
   public func removePage(index: Swift.Int? = nil)
   public func gotoPage(index: Swift.Int)
   @objc deinit
+}
+public struct JoinRoomOptions {
+  public struct AuthOption {
+    public init(roomId: Swift.String, token: Swift.String, userId: Swift.String, nickName: Swift.String, region: ScribbleForge.Region?)
+    public let roomId: Swift.String
+    public let token: Swift.String
+    public let userId: Swift.String
+    public let nickName: Swift.String
+    public let region: ScribbleForge.Region?
+  }
+  public struct LogOption {
+    public init(logDirPath: Swift.String? = nil, allowRemoteLog: Swift.Bool = true, allowConsoleLog: Swift.Bool = true, allowConsoleVerboseLog: Swift.Bool = false, allowPerfLog: Swift.Bool = true)
+    public var logDirPath: Swift.String?
+    public var allowRemoteLog: Swift.Bool
+    public var allowConsoleLog: Swift.Bool
+    public var allowConsoleVerboseLog: Swift.Bool
+    public var allowPerfLog: Swift.Bool
+  }
+  public var authOption: ScribbleForge.JoinRoomOptions.AuthOption
+  public var useSnapshotFetch: Swift.Bool
+  public var logOption: ScribbleForge.JoinRoomOptions.LogOption
+  public init(authOption: ScribbleForge.JoinRoomOptions.AuthOption, logOption: ScribbleForge.JoinRoomOptions.LogOption? = nil, useSnapshotFetch: Swift.Bool = true)
 }
 public protocol JSConvertible {
   init(jsValue: JavaScriptCore.JSValue)
@@ -143,7 +168,7 @@ extension ScribbleForge.NetworkProvider {
     set
   }
   public static func sdkVersion() -> Swift.String
-  public init(roomId: Swift.String, userId: Swift.String, nickName: Swift.String, snapshotFetcher: ScribbleForge.SnapshotFetcher, uploaderExecutor: ScribbleForge.UploaderExecutor, remoteLogger: ScribbleForge.BaseDestination?, networkProvider: ScribbleForge.NetworkProvider, mergeThrottleTime: Foundation.TimeInterval = 0.016, mergeBufferCount: Swift.Int = 6, logDirPath: Swift.String? = nil, allowConsoleLog: Swift.Bool = true, allowConsoleVerboseLog: Swift.Bool = true)
+  public init(roomId: Swift.String, userId: Swift.String, nickName: Swift.String, snapshotFetcher: ScribbleForge.SnapshotFetcher, uploaderExecutor: ScribbleForge.UploaderExecutor, remoteLogger: ScribbleForge.BaseDestination?, networkProvider: ScribbleForge.NetworkProvider, mergeThrottleTime: Foundation.TimeInterval = 0.016, mergeBufferCount: Swift.Int = 6, logDirPath: Swift.String? = nil, allowConsoleLog: Swift.Bool = true, allowConsoleVerboseLog: Swift.Bool = false, perfEnable: Swift.Bool = true)
   @objc deinit
   public func addDelegate(_ delegate: ScribbleForge.RoomDelegate)
   public func removeDelegate(_ delegate: ScribbleForge.RoomDelegate)
@@ -158,6 +183,20 @@ public protocol RoomDelegate : AnyObject {
   func roomUserLeaveRoom(_ room: ScribbleForge.Room, userId: Swift.String)
   func roomApplicationDidLaunch(_ room: ScribbleForge.Room, application: ScribbleForge.Application)
   func roomApplicationDidTerminal(_ room: ScribbleForge.Room, application: ScribbleForge.Application)
+}
+public enum ScribbleError : Swift.Error {
+  case whiteboardError(Swift.String)
+  case networkError(Swift.Error)
+  case uploadDataError(Swift.String)
+  case initVectorTimeout
+  case fetchSnapshotError(Swift.Error)
+  case invalidAppId
+  case appTypeNotFound
+  case appDataError
+  case appAlreadyLaunched
+  case timeout
+  case httpError(Swift.Int)
+  case unknowError(Swift.String)
 }
 public protocol SnapshotFetcher {
   func getSnapshot(roomId: Swift.String, completionHandler: @escaping ((Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void))
@@ -195,70 +234,70 @@ public enum ViewMode {
   case mainView
   case follow(userId: Swift.String)
 }
-@objc public class Whiteboard : ObjectiveC.NSObject, ScribbleForge.Application {
-  public var applicationView: UIKit.UIView? {
+@objc final public class Whiteboard : ObjectiveC.NSObject, ScribbleForge.Application {
+  final public var applicationView: UIKit.UIView? {
     get
   }
   final public let appId: Swift.String
-  weak public var delegate: ScribbleForge.WhiteboardDelegate? {
+  weak final public var delegate: ScribbleForge.WhiteboardDelegate? {
     get
     set
   }
-  public var indexedNavigation: ScribbleForge.IndexedNavigation {
+  final public var indexedNavigation: ScribbleForge.IndexedNavigation {
     get
     set
   }
-  required public init(appId: Swift.String, userId: Swift.String, userManager: ScribbleForge.UserManager, doc: ScribbleForge.YDoc, option: [Swift.String : Any], extraOptions: [Swift.String : Any]?, launchFinishHandler: (() -> Swift.Void)?)
+  required public init(appId: Swift.String, userId: Swift.String, userManager: ScribbleForge.UserManager, doc: ScribbleForge.YDoc, option: [Swift.String : Any], extraOptions: [Swift.String : Any]?, launchFinishHandler: ((ScribbleForge.Whiteboard) -> Swift.Void)?)
   public static var typeIdentifier: Swift.String {
     get
   }
-  public func terminal()
-  public func clean()
-  public func setFreeModeUserPageIndex(index: Swift.Int, userId: Swift.String)
-  public func setFreeModeUserPage(id: Swift.String, userId: Swift.String)
-  public func setViewMode(_ viewMode: ScribbleForge.ViewMode, forUserId userId: Swift.String? = nil)
-  public func getViewMode(_ userId: Swift.String? = nil, completionHandler: @escaping ((ScribbleForge.ViewMode) -> Swift.Void))
-  public func undo()
-  public func redo()
-  public func rasterize(option: ScribbleForge.RasterizeOption = .viewport(page: nil, scale: 1), completionHandler: @escaping ((Swift.Result<UIKit.UIImage, Swift.Error>) -> Swift.Void))
-  public func getPermission(userId: Swift.String? = nil, _ completionHandler: @escaping ((ScribbleForge.WhiteboardPermission) -> Swift.Void))
-  public func setPermission(userId: Swift.String? = nil, permission: ScribbleForge.WhiteboardPermission)
-  public func setBackgroundColor(_ color: UIKit.UIColor)
-  public func setThemeColor(_ color: UIKit.UIColor)
-  public func currentTool() -> ScribbleForge.WhiteboardToolType?
-  public func setCurrentTool(_ toolType: ScribbleForge.WhiteboardToolType)
-  public func fontSize() -> Swift.Float?
-  public func setFontSize(_ size: Swift.Float)
-  public func dashArray() -> [Swift.Float]?
-  public func setDashArray(_ array: [Swift.Float])
-  public func fontFamily() -> Swift.String?
-  public func setFontFamily(_ font: Swift.String)
-  public func strokeColor() -> Swift.String?
-  public func setStrokeColor(_ color: UIKit.UIColor)
-  public func fillColor() -> Swift.String?
-  public func setFillColor(_ color: UIKit.UIColor)
-  public func strokeWidth() -> Swift.Float?
-  public func setStrokeWidth(_ width: Swift.Float)
-  public func setElementAttribute(layerId: Swift.String, elementId: Swift.String, attributeKey: ScribbleForge.ElementAttributesKey, value: Any)
-  public func getElementAttribute(sceneId: Swift.String, elementId: Swift.String, attributeKey: ScribbleForge.ElementAttributesKey, completionHandler: ((Any?) -> Swift.Void)?)
-  public func translateCamera(offset: CoreGraphics.CGPoint)
-  public func scaleCamera(scale: CoreGraphics.CGFloat)
-  public func resetCamera()
-  public func enableCameraTranslate(_ enable: Swift.Bool)
-  public func enableCameraBoundaryHighlight(_ enable: Swift.Bool)
-  public func setCameraBoundaryColor(_ color: UIKit.UIColor)
+  final public func terminal()
+  final public func clean()
+  final public func setFreeModeUserPageIndex(index: Swift.Int, userId: Swift.String)
+  final public func setFreeModeUserPage(id: Swift.String, userId: Swift.String)
+  final public func setViewMode(_ viewMode: ScribbleForge.ViewMode, forUserId userId: Swift.String? = nil)
+  final public func getViewMode(_ userId: Swift.String? = nil, completionHandler: @escaping ((ScribbleForge.ViewMode) -> Swift.Void))
+  final public func undo()
+  final public func redo()
+  final public func rasterize(option: ScribbleForge.RasterizeOption = .viewport(page: nil, scale: 1), completionHandler: @escaping ((Swift.Result<UIKit.UIImage, Swift.Error>) -> Swift.Void))
+  final public func getPermission(userId: Swift.String? = nil, _ completionHandler: @escaping ((ScribbleForge.WhiteboardPermission) -> Swift.Void))
+  final public func setPermission(userId: Swift.String? = nil, permission: ScribbleForge.WhiteboardPermission)
+  final public func setBackgroundColor(_ color: UIKit.UIColor)
+  final public func setThemeColor(_ color: UIKit.UIColor)
+  final public func currentTool() -> ScribbleForge.WhiteboardToolType?
+  final public func setCurrentTool(_ toolType: ScribbleForge.WhiteboardToolType)
+  final public func fontSize() -> Swift.Float?
+  final public func setFontSize(_ size: Swift.Float)
+  final public func dashArray() -> [Swift.Float]?
+  final public func setDashArray(_ array: [Swift.Float])
+  final public func fontFamily() -> Swift.String?
+  final public func setFontFamily(_ font: Swift.String)
+  final public func strokeColor() -> Swift.String?
+  final public func setStrokeColor(_ color: UIKit.UIColor)
+  final public func fillColor() -> Swift.String?
+  final public func setFillColor(_ color: UIKit.UIColor)
+  final public func strokeWidth() -> Swift.Float?
+  final public func setStrokeWidth(_ width: Swift.Float)
+  final public func setElementAttribute(layerId: Swift.String, elementId: Swift.String, attributeKey: ScribbleForge.ElementAttributesKey, value: Any)
+  final public func getElementAttribute(sceneId: Swift.String, elementId: Swift.String, attributeKey: ScribbleForge.ElementAttributesKey, completionHandler: ((Any?) -> Swift.Void)?)
+  final public func translateCamera(offset: CoreGraphics.CGPoint)
+  final public func scaleCamera(scale: CoreGraphics.CGFloat)
+  final public func resetCamera()
+  final public func enableCameraTranslate(_ enable: Swift.Bool)
+  final public func enableCameraBoundaryHighlight(_ enable: Swift.Bool)
+  final public func setCameraBoundaryColor(_ color: UIKit.UIColor)
   @objc deinit
 }
 extension ScribbleForge.Whiteboard : ScribbleForge.WhiteboardDelegate {
-  public func whiteboardUndoStackLengthUpdate(_: ScribbleForge.Whiteboard, undoStackLength _: Swift.Int)
-  public func whiteboardRedoStackLengthUpdate(_: ScribbleForge.Whiteboard, redoStackLength _: Swift.Int)
-  public func whiteboardError(_: ScribbleForge.Whiteboard, errorCode _: Swift.Int, errorMessage _: Swift.String)
-  public func whiteboardToolInfoUpdate(_: ScribbleForge.Whiteboard, toolInfo _: ScribbleForge.WhiteboardToolInfo)
-  public func whiteboardPagePermissionUpdate(_: ScribbleForge.Whiteboard, userId _: Swift.String, permission _: ScribbleForge.WhiteboardPermission)
-  public func whiteboardPageInfoUpdate(_: ScribbleForge.Whiteboard, activePageIndex _: Swift.Int, pageCount _: Swift.Int)
-  public func whiteboardElementSelected(_: ScribbleForge.Whiteboard, info _: ScribbleForge.WhiteboardSelectInfo)
-  public func whiteboardElementDeselected(_: ScribbleForge.Whiteboard)
-  public func whitebaordToolChange(_: ScribbleForge.Whiteboard, tool _: ScribbleForge.WhiteboardToolType)
+  final public func whiteboardUndoStackLengthUpdate(_: ScribbleForge.Whiteboard, undoStackLength _: Swift.Int)
+  final public func whiteboardRedoStackLengthUpdate(_: ScribbleForge.Whiteboard, redoStackLength _: Swift.Int)
+  final public func whiteboardError(_: ScribbleForge.Whiteboard, errorCode _: Swift.Int, errorMessage _: Swift.String)
+  final public func whiteboardToolInfoUpdate(_: ScribbleForge.Whiteboard, toolInfo _: ScribbleForge.WhiteboardToolInfo)
+  final public func whiteboardPagePermissionUpdate(_: ScribbleForge.Whiteboard, userId _: Swift.String, permission _: ScribbleForge.WhiteboardPermission)
+  final public func whiteboardPageInfoUpdate(_: ScribbleForge.Whiteboard, activePageIndex _: Swift.Int, pageCount _: Swift.Int)
+  final public func whiteboardElementSelected(_: ScribbleForge.Whiteboard, info _: ScribbleForge.WhiteboardSelectInfo)
+  final public func whiteboardElementDeselected(_: ScribbleForge.Whiteboard)
+  final public func whitebaordToolChange(_: ScribbleForge.Whiteboard, tool _: ScribbleForge.WhiteboardToolType)
 }
 public struct WhiteboardInializeOption {
   public struct DefaultToolInfo {
@@ -278,7 +317,7 @@ public struct WhiteboardInializeOption {
   public init(from decoder: Swift.Decoder) throws
 }
 extension ScribbleForge.Room {
-  public func launchWhiteboard(appId: Swift.String? = nil, option: ScribbleForge.WhiteboardInializeOption? = nil)
+  public func launchWhiteboard(appId: Swift.String? = nil, option: ScribbleForge.WhiteboardInializeOption? = nil, completionHandler: ((Swift.Result<ScribbleForge.Whiteboard, Swift.Error>) -> Swift.Void)? = nil)
 }
 public protocol WhiteboardDelegate : ObjectiveC.NSObject {
   func whiteboardElementSelected(_ board: ScribbleForge.Whiteboard, info: ScribbleForge.WhiteboardSelectInfo)
@@ -362,6 +401,74 @@ public enum WhiteboardToolType : Swift.String, Swift.CaseIterable, Swift.Codable
   public var rawValue: Swift.String {
     get
   }
+}
+public enum WindowState : Swift.String {
+  case maximized
+  case minimized
+  case normal
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers final public class WindowManager : ObjectiveC.NSObject, ScribbleForge.Application {
+  public static var typeIdentifier: Swift.String {
+    get
+  }
+  final public var appId: Swift.String
+  final public var applicationView: UIKit.UIView? {
+    get
+  }
+  weak final public var delegate: ScribbleForge.WindowManagerDelegate?
+  final public var windowsInfo: [Swift.String : ScribbleForge.WindowInfo] {
+    get
+  }
+  final public var ratio: CoreGraphics.CGFloat? {
+    get
+  }
+  final public func updateRatio(_ ratio: CoreGraphics.CGFloat?)
+  final public func moveApp(_ appId: Swift.String, to position: CoreGraphics.CGPoint)
+  final public func terminalApp(_ windowAppId: Swift.String)
+  final public func updateWindowState(_ state: ScribbleForge.WindowState)
+  final public func focusApp(_ appId: Swift.String)
+  @objc deinit
+}
+extension ScribbleForge.WindowManager : QuartzCore.CAAnimationDelegate {
+  @objc final public func animationDidStop(_: QuartzCore.CAAnimation, finished _: Swift.Bool)
+}
+public struct WindowInfo {
+  public let windowAppId: Swift.String
+  public let title: Swift.String
+  public var frame: CoreGraphics.CGRect
+  public var zIndex: Swift.Int
+}
+extension ScribbleForge.Room {
+  public func launchWindowManager(windowManagerId: Swift.String? = nil, ratio: CoreGraphics.CGFloat? = nil, permission: ScribbleForge.WindowManagerPermission = .operating, _ completionHandler: @escaping (Swift.Result<ScribbleForge.WindowManager, Swift.Error>) -> Swift.Void)
+}
+extension ScribbleForge.WindowManager {
+  final public func launchTestNativePdf()
+  final public func launchTestWhiteboard()
+}
+public protocol WindowManagerDelegate : AnyObject {
+  func windowManager(_ windowManager: ScribbleForge.WindowManager, permissionUpdate permission: ScribbleForge.WindowManagerPermission, userId: Swift.String)
+  func windowManager(_ windowManager: ScribbleForge.WindowManager, windowStateUpdate windowState: ScribbleForge.WindowState)
+  func windowManager(_ windowManager: ScribbleForge.WindowManager, focusedAppUpdate appId: Swift.String)
+  func windowManager(_ windowManager: ScribbleForge.WindowManager, didLaunchApp application: ScribbleForge.Application)
+  func windowManager(_ windowManager: ScribbleForge.WindowManager, didTerminal application: ScribbleForge.Application)
+}
+public struct WindowManagerPermission : Swift.OptionSet {
+  public init(rawValue: Swift.Int)
+  public let rawValue: Swift.Int
+  public static let none: ScribbleForge.WindowManagerPermission
+  public static let operating: ScribbleForge.WindowManagerPermission
+  public typealias ArrayLiteralElement = ScribbleForge.WindowManagerPermission
+  public typealias Element = ScribbleForge.WindowManagerPermission
+  public typealias RawValue = Swift.Int
+}
+extension ScribbleForge.WindowManager {
+  final public func getPermission(_ userId: Swift.String) -> ScribbleForge.WindowManagerPermission
+  final public func setPermission(_ userId: Swift.String, permission: ScribbleForge.WindowManagerPermission)
 }
 public protocol YConvertible {
   init?(jsValue: JavaScriptCore.JSValue)
@@ -574,3 +681,6 @@ extension ScribbleForge.ElementAttributesKey : Swift.RawRepresentable {}
 extension ScribbleForge.WhiteboardToolType : Swift.Equatable {}
 extension ScribbleForge.WhiteboardToolType : Swift.Hashable {}
 extension ScribbleForge.WhiteboardToolType : Swift.RawRepresentable {}
+extension ScribbleForge.WindowState : Swift.Equatable {}
+extension ScribbleForge.WindowState : Swift.Hashable {}
+extension ScribbleForge.WindowState : Swift.RawRepresentable {}

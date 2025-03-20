@@ -1,9 +1,16 @@
 # CHANGELOG
 
-### 0.1.27
+### 0.1.29
 
 @netless/forge-room@0.1.8
 @netless/forge-whiteboard@0.1.14
+
+- 增加 snapshot http 状态码处理
+- 不允许加入多个房间
+- 支持不填 region
+- 历史记录 origin 优化
+- 优化 delete key 冲突处理
+- conflict 增加 debounce
 
 ### 0.1.26
 

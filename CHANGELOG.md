@@ -1,5 +1,10 @@
 # CHANGELOG
 
+### 0.1.27
+
+@netless/forge-room@0.1.8
+@netless/forge-whiteboard@0.1.14
+
 ### 0.1.26
 
 @netless/forge-room@0.1.6

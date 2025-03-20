@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author           = { 'vince' => 'zjxuyunshi@gmail.com' }
   s.platform         = :ios, '11.0'
   s.swift_versions   = '5.0'
-  s.source = {  :http => "https://github.com/netless-io/scribble-forge-release/releases/download/v0.1.29/Build.zip" }
+  s.source = {  :http => "https://github.com/netless-io/scribble-forge-release/releases/download/0.1.29/Build.zip" }
 
   s.subspec 'Basic' do |s|
     s.vendored_frameworks = 'Build/ScribbleForge.xcframework'

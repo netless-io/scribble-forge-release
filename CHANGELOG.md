@@ -1,5 +1,17 @@
 # CHANGELOG
 
+### 0.1.31
+
+@netless/forge-room@0.1.12
+@netless/forge-whiteboard@0.1.16
+
+#### Hide
+- WindowManager
+- Slide / ImageDoc
+- @netless/forge-slide@0.1.1-alpha.9
+- @netless/forge-imagery-doc@0.1.3
+
+
 ### 0.1.30
 
 @netless/forge-room@0.1.8

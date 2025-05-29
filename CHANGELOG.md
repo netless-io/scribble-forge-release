@@ -1,6 +1,7 @@
 # CHANGELOG
 
-### 0.1.32
+### 0.1.33
+
 @netless/forge-whiteboard@0.1.18
 
 - 新增 Application.performPrivateFunction(functionName, argument) 方法
@@ -15,11 +16,11 @@
 @netless/forge-whiteboard@0.1.16
 
 #### Hide
+
 - WindowManager
 - Slide / ImageDoc
 - @netless/forge-slide@0.1.1-alpha.9
 - @netless/forge-imagery-doc@0.1.3
-
 
 ### 0.1.30
 

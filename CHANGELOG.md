@@ -1,5 +1,14 @@
 # CHANGELOG
 
+### 0.1.32
+@netless/forge-whiteboard@0.1.18
+
+- 新增 Application.performPrivateFunction(functionName, argument) 方法
+- 设置主画布可见性. NSNumber(true) 为可见，NSNumber(false) 为不可见
+  app.performPrivateFunction("setMainCanvasVisible:", argument: NSNumber(true))
+- 设置画面隐藏延迟. NSNumber(1500) 为延迟时间，单位毫秒
+  app.performPrivateFunction("setDelayTranslateOut:", argument: NSNumber(1500))
+
 ### 0.1.31
 
 @netless/forge-room@0.1.12

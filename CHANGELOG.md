@@ -1,5 +1,11 @@
 # CHANGELOG
 
+### 0.1.34
+
+@netless/forge-whiteboard@0.1.20
+
+-  新增 `WhiteboardApplication.updateViewport` 方法
+ 
 ### 0.1.33
 
 @netless/forge-whiteboard@0.1.18

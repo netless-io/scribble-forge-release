@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 0.1.35
+
+- App 存在时拒绝 Launch
+
 ### 0.1.34
 
 @netless/forge-whiteboard@0.1.20
